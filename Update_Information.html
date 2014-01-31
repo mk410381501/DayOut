@@ -26,7 +26,11 @@
 
     <section class="main-content" role="main">
 
-<form accept-charset="UTF-8" action="information.php" class="activation" method="post" onsubmit="return validateLogin()"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="FaHdRKatVSs1ijq4jDvHsDtwJUi2dqthheXWjakTP5Y=" /></div>
+<form accept-charset="UTF-8" action="information.php" class="activation" method="post" onsubmit="return validateLogin()">
+<div style="margin:0;padding:0;display:inline">
+<input name="utf8" type="hidden" value="&#x2713;" />
+<input name="authenticity_token" type="hidden" value="FaHdRKatVSs1ijq4jDvHsDtwJUi2dqthheXWjakTP5Y=" />
+</div>
   
   <div class='content content-pad-vert'>
     <h2 class="bordered">How will you use DayOut?</h2>
@@ -40,27 +44,30 @@
         <div class="row grid-1-2-2">
           <div class="field">
             <label for="industry">What services do you provide?</label>
-            <select data-select-enhanced="true" data-select-hide-search="true" data-select-icon="true" id="services" name="services">
-<option value="BPC" selected="selected">Beauty Personal Care</option>
-<option value="CU" selected="selected">Casual Use</option>
-<option value="CEM" selected="selected">Charities, Education and Membership</option>
-<option value="FD" selected="selected">Food and Drink</option>
-<option value="HF" selected="selected">Healthcare and Fitness</option>
-<option value="HR" selected="selected">Home and Repair</option>
-<option value="LE" selected="selected">Lesuire and Enterainment</option>
-<option value="R" selected="selected">Retail</option>
-<option value="T" selected="selected">Transportation</option>
+            <select id="industry" name="industry">
+            <option selected="selected" value="">Select One...</option>
+            
+            <option value="Beauty Personal Care">Beauty Personal Care</option>
+            <option value="Casual Use">Casual Use</option>
+            <option value="Charities, Education and Membership">Charities, Education and Membership</option>
+            <option value="Food and Drink">Food and Drink</option>
+            <option value="Healthcare and Fitness">Healthcare and Fitness</option>
+            <option value="Home and Repair">Home and Repair</option>
+            <option value="Lesuire and Enterainment">Lesuire and Enterainment</option>
+            <option value="Retail">Retail</option>
+            <option value="Transportation">Transportation</option>
 </select>
           </div>
           
           <div class="field">
             <label for="reason">Why use DayOut?</label>
-            <select data-select-enhanced="true" data-select-hide-search="true" data-select-icon="true" id="services" name="services">
-
-<option value="AIG" selected="selected">To Advertise In General</option>
-<option value="AA" selected="selected">To Advertise Attractions</option>
-<option value="AD" selected="selected">To Advertise Deals</option>
-<option value="AE" selected="selected">To Advertise Events</option>
+            <select id="reason" name="reason">
+            
+            <option selected="selected" value="">Select One...</option>
+            <option value="Attractions, Deals & Events">To Advertise In General</option>
+            <option value="Attractions">To Advertise Attractions</option>
+            <option value="Deals">To Advertise Deals</option>
+            <option value="Events">To Advertise Events</option>
 
 </select>
           </div>
