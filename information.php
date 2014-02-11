@@ -17,7 +17,7 @@ if($finish){
 		$insert = mysql_query("INSERT INTO Services (industry, reason) VALUES ('$industry', '$reason')");
 		$insert = mysql_query("INSERT INTO BusinessInfo (b_name, number, address1, address2, address3, address4) VALUES ('$business_name', '$number', '$address1', '$address2', '$address3', '$address4')");
 		
-		header('Location: /Merchants.html');
+		header('Location: /Home_Page.php');
 }
 
 ?>

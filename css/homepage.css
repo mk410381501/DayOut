@@ -32,9 +32,12 @@ body{
 }
 
 .container{
-	max-width:1000px;
-	width:96%;
-	margin:0 auto;
+	max-width: 1000px;
+	width: 96%;
+	margin-bottom: 0;
+	margin-left: 0px;
+	margin-right: auto;
+	margin-top: 0px;
 }
 
 .clearfix:after

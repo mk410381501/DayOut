@@ -8,7 +8,7 @@
     <title> DayOut Activation </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="register.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/register.css" media="screen" rel="stylesheet" type="text/css" />
     <meta content="authenticity_token" name="csrf-param" />
     <meta content="FaHdRKatVSs1ijq4jDvHsDtwJUi2dqthheXWjakTP5Y=" name="csrf-token" />
     
@@ -18,7 +18,7 @@
   <body class="idv">
   
   <div id="fixed_header">
-	<a href="Home_Page.html" id="logo"><img alt="Logo dark" src="logoheadercopy.png" /></a>
+	<a href="Home_Page.php" id="logo"><img alt="Logo dark" src="logoheadercopy.png" /></a>
     
 
 </div>
@@ -26,11 +26,7 @@
 
     <section class="main-content" role="main">
 
-<form accept-charset="UTF-8" action="information.php" class="activation" method="post" onsubmit="return validateLogin()">
-<div style="margin:0;padding:0;display:inline">
-<input name="utf8" type="hidden" value="&#x2713;" />
-<input name="authenticity_token" type="hidden" value="FaHdRKatVSs1ijq4jDvHsDtwJUi2dqthheXWjakTP5Y=" />
-</div>
+<form accept-charset="UTF-8" action="information.php" class="activation" method="post" onsubmit="return validateLogin()"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="FaHdRKatVSs1ijq4jDvHsDtwJUi2dqthheXWjakTP5Y=" /></div>
   
   <div class='content content-pad-vert'>
     <h2 class="bordered">How will you use DayOut?</h2>
@@ -43,7 +39,7 @@
 
         <div class="row grid-1-2-2">
           <div class="field">
-            <label for="industry">What services do you provide?</label>
+            <label for="">What services do you provide?</label>
             <select id="industry" name="industry">
             <option selected="selected" value="">Select One...</option>
             
@@ -55,12 +51,12 @@
             <option value="Home and Repair">Home and Repair</option>
             <option value="Lesuire and Enterainment">Lesuire and Enterainment</option>
             <option value="Retail">Retail</option>
-            <option value="Transportation">Transportation</option>
+            <option value="Transportation">Transportation</option> 
 </select>
           </div>
           
           <div class="field">
-            <label for="reason">Why use DayOut?</label>
+            <label for="">Why use DayOut?</label>
             <select id="reason" name="reason">
             
             <option selected="selected" value="">Select One...</option>

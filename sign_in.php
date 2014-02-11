@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <title>DayOut Sign In</title>
-<link rel="stylesheet" type="text/css" href="sign_in.css" />
+<link rel="stylesheet" type="text/css" href="css/sign_in.css" />
 </head>
 <body>
 
@@ -15,7 +15,7 @@
 	<section id="content">
     
     <form form name="login" method="post" action="loginprocess.php" accept-charset="utf-8">
-<a href="Home_Page.html"><img src="logoheadercopy.png"></a>
+<a href="Home_Page.php"><img src="logoheadercopy.png"></a>
 			<h1></h1>
 		  <div>
 				<input type="text" name="email" placeholder="example@dayout.com" required id="username" />

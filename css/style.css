@@ -1,0 +1,513 @@
+/* Global */
+
+body {
+	font-family:'Source Sans Pro', sans-serif;
+	color: #000;
+	background-color:#ffffff;
+}
+
+img {
+	max-width: 100%;
+}
+a:link {
+	color: #2892c6;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #2892c6;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #2892c6;
+	text-decoration: none;
+}
+
+*
+{
+	margin:0;
+	padding:0;
+	font-family:'Source Sans Pro', sans-serif;
+}
+
+
+
+
+/* Navigation */
+
+.menu {
+	position:fixed;
+	top:0px;
+	width:100%; 
+	height:auto; 
+	background-color:#ffffff;
+	/* background-color:#f6f6f6; */
+	z-index:100;
+}
+
+#logo {
+	text-align: center;
+	margin: 10px 0;
+}
+#nav {
+	text-align: right;
+	margin: 30px 0 0 0;
+}
+.navigation{
+	float: right;
+	list-style: none;
+	margin: 0;
+}
+.navigation li{
+	float: left;
+	padding:0 0 0 50px;
+	text-transform: uppercase;
+	cursor:pointer;
+	font-size:14px;
+	font-weight:400;
+	letter-spacing:1px;
+	color:#000;
+}
+
+
+.navigation li signin a
+{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #2892c6;
+	padding: 8px 12px;
+	border: 1px solid #999;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px #eee;
+	margin-left: 40px;
+	border-color:#2892c6;
+}
+
+.navigation li signin
+{
+	cursor:pointer;
+	color: #2892c6;
+}
+
+.navigation .active{
+	cursor:pointer;
+	font-weight:bold;
+}
+
+/* General Slides */ 
+
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	height:auto;
+	position: relative;
+	text-align:center;
+}
+
+
+/* Slide 1 */ 
+
+#slide1{
+	background:url('../images/trinity2.png');
+	width:100%;
+	background-size:cover;
+	position:relative;
+	overflow:hidden;
+	padding:160px 0;
+
+}
+#slide1 h1 {
+	
+	font-weight:400;
+	font-size:54px;
+	color:#000;
+	line-height:1.1;
+	margin-bottom:15px;
+}
+
+#slide1 h2 {
+	
+	font-size:32px;
+	font-weight:400;
+	line-height:1.5;
+	color:#000;
+	opacity:.9;
+	margin-bottom:10px;
+	
+	padding-bottom:20px;
+}
+
+button{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 13px;
+	font-weight:400;
+	letter-spacing:1px;
+	text-transform:uppercase;
+	
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	background: -webkit-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #64c8ef 0%,#00a2e2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64c8ef', endColorstr='#00a2e2',GradientType=0 ); /* IE6-9 */
+	color: #000;
+	padding: 3px 8px;
+	border-radius: 3px;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+	
+    height:30px; 
+    width:150px; 
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    
+}
+
+button:hover {
+	cursor:pointer;
+	background: #3399FF;
+}
+
+/* Slide 2 */ 
+
+#slide2{
+	background-color:#fffff;
+	padding:80px 0;
+
+}
+
+#slide2 h3
+{
+	font-size:48px;
+	text-transform:uppercase;
+	font-weight:300;
+	margin-bottom:30px;
+}
+
+#slide2 p {
+	
+	width:520px;
+	margin:0 auto;
+	font-size:17px;
+	line-height:1.8;
+	color:#656565;
+	font-weight:300;
+}
+
+/* Mobile */
+@media screen and (max-width : 520px) {
+
+#slide2 p {
+	width:100%;
+}
+}
+
+.feature
+{
+	width:320px;
+	float:left;
+	text-align:center;
+	margin-top:50px;
+}
+
+.feature:nth-child(even)
+{
+	margin:0 20px;
+	margin-top:50px;
+}
+
+.feature .icon
+{
+	width:120px;
+	height:120px;
+	display:block;
+	margin:0 auto;
+	border:2px solid #737373;
+	border-radius:60px;
+	margin-bottom:30px;
+	background:url(events-icon.png) no-repeat center;
+}
+
+/* change this to have attractions NOT societies */
+.feature #attractions_icon
+{
+	background-image:url(attractioncopy.png) !important;
+}
+
+.feature #deals_icon
+{
+	background-image:url(deals-icon.png) !important;
+}
+
+/* heading of each of the icons */	
+.feature h4
+{
+	text-transform:uppercase;
+	font-size:15px;
+	margin-bottom:10px;
+}
+
+/* font under the headings */
+.feature p
+{
+	width:95%;
+}
+
+
+
+/* Slide 3 */ 
+
+#slide3{
+	background-color:#2892c6;
+	color:#ffffff;
+	padding:100px 0;
+}
+#slide3 h3 {
+	font-size:48px;
+	text-transform:uppercase;
+	font-weight:300;
+	margin-bottom:30px;
+}
+#slide3 p {
+	width:520px;
+	margin:0 auto;
+	font-size:17px;
+	line-height:1.8;
+	color:#ffffff;
+	font-weight:300;
+}
+
+
+/* Slide 4 */
+
+#slide4{
+
+	background-color:#fffff;
+	color:#000;
+	padding:80px 0;
+}
+
+#slide4 h3 {
+	font-size:48px;
+	text-transform:uppercase;
+	font-weight:300;
+	margin-bottom:30px;
+}
+#slide4 p {
+	width:520px;
+	margin:0 auto;
+	font-size:17px;
+	line-height:1.8;
+	color:#656565;
+	font-weight:300;
+}
+
+h5,ol,ul,li
+{
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	vertical-align:baseline;
+}
+
+#footer
+{
+	background:#e5e5e5;
+	padding-bottom:50px;
+	border-top:1px solid #ddd;
+	padding-top:50px;
+	color:#FFF;
+}
+
+#footer .footer_links
+{
+	width:200px;
+	float:left;
+}
+
+#footer .footer_links h5
+{
+	line-height:1.4;
+	color:#444;
+}
+
+/* fonts to links like Facebook & Twitter */
+#footer .footer_links a
+{
+	color:#555;
+	font-size:16px;
+	text-decoration:none;
+	line-height:1.4;
+}
+
+/* when you hover over any of the links they go blue! */
+#footer .footer_links a:hover
+{
+	color:#2892c6;
+}
+
+/* All Right Reserved section */
+#footer #rights
+{
+	float:right;
+	color:#aaa;
+	letter-spacing:1px;
+}
+
+
+
+
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+
+#logo {
+	width: 100%;
+	text-align: center;
+}
+
+#nav {
+	width:100%;
+	text-align:center;
+	margin:10px 0;
+}
+
+.navigation{
+	width: 100%;
+	float: center;
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+.navigation li{
+	float: left;
+	width:25%;
+	padding:0;
+}
+
+.navigation text{
+	float: left;
+	width:25%;
+}
+
+.slide{
+	background-attachment: fixed;
+	width: 100%;
+	position: relative;
+	padding-bottom: 150px;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 150px;
+}
+
+#decorative {
+	display:none;
+}
+
+#content {
+	text-align:center;
+	width:100%;
+}
+
+#slide1 h1 {
+	line-height: 1em;
+}
+#slide1 h2 {
+	line-height: 1em;
+}
+#slide2 h1 {
+	line-height: 1em;
+}
+#slide2 h2 {
+	line-height: 1em;
+}
+#slide3 h1 {
+	line-height: 1em;
+}
+#slide3 h2 {
+	line-height: 1em;
+}
+#slide4 h1 {
+	line-height: 1em;
+}
+#slide4 h2 {
+	line-height: 1em;
+}
+
+}
+
+
+
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+
+#logo {
+	width: 100%;
+	text-align: center;
+}
+
+#nav {
+	width:100%;
+	margin:5px 0;
+}
+
+.navigation{
+	width: 100%;
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+.navigation li{
+	float: left;
+	width:25%;
+}
+
+.navigation text{
+	float: left;
+	width:25%;
+}
+
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	position: relative;
+	padding:150px 0;
+}
+
+
+#slide1 h1 {
+	line-height: 1em;
+}
+#slide1 h2 {
+	line-height: 1em;
+}
+#slide2 h1 {
+	line-height: 1em;
+}
+#slide2 h2 {
+	line-height: 1em;
+}
+#slide3 h1 {
+	line-height: 1em;
+}
+#slide3 h2 {
+	line-height: 1em;
+}
+#slide4 h1 {
+	line-height: 1em;
+}
+#slide4 h2 {
+	line-height: 1em;
+}
+
+
+}

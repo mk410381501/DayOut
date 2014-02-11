@@ -1,0 +1,384 @@
+/* Global */
+
+body {
+	font-family:'Source Sans Pro', sans-serif;
+	color: #000;
+	background-color:#ffffff;
+}
+
+img {
+	max-width: 100%;
+}
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #2892c6;
+	text-decoration: none;
+}
+
+*
+{
+	margin:0;
+	padding:0;
+	font-family:'Source Sans Pro', sans-serif;
+}
+
+
+
+
+/* Navigation */
+
+.menu {
+	position:fixed;
+	top:0px;
+	width:100%; 
+	height:auto; 
+	background-color:#ffffff;
+	/* background-color:#f6f6f6; */
+	z-index:100;
+}
+
+#logo {
+	text-align: center;
+	margin: 10px 0;
+}
+#nav {
+	text-align: right;
+	margin: 30px 0 0 0;
+}
+.navigation{
+	float: right;
+	list-style: none;
+	margin: 0;
+}
+.navigation li{
+	color: #000;
+	float: left;
+	padding:0 0 0 50px;
+}
+
+.navigation a {
+	text-decoration:none;
+	text-transform:uppercase;
+	font-size:14px;
+	font-weight:400;
+	letter-spacing:1px;
+	color:#000;
+}
+
+.navigation signin a
+{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #2892c6;
+	padding: 8px 12px;
+	border: 1px solid #999;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px #eee;
+	margin-left: 40px;
+	border-color:#2892c6;
+}
+
+
+.navigation signin:hover
+{
+	cursor:pointer;
+	color: #2892c6;
+}
+
+/* General Slides */ 
+
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	height:auto;
+	position: relative;
+	text-align:center;
+}
+
+
+/* Slide 1 */ 
+
+#slide1{
+	background-color:#FFF;
+	width:100%;
+	background-size:cover;
+	position:relative;
+	overflow:hidden;
+	padding:80px 0;
+
+}
+#slide1 h1 {
+	
+	font-weight:400;
+	font-size:54px;
+	color:#000;
+	line-height:1.1;
+	margin-bottom:15px;
+}
+
+#slide1 h2 {
+	
+	font-size:32px;
+	font-weight:400;
+	line-height:1.5;
+	color:#000;
+	opacity:.9;
+	margin-bottom:10px;
+	
+	padding-bottom:20px;
+}
+
+#slide1 h3 {
+	font-size:48px;
+	text-transform:uppercase;
+	font-weight:300;
+	margin-bottom:30px;
+}
+#slide1 p {
+	width:520px;
+	margin:0 auto;
+	font-size:17px;
+	line-height:1.8;
+	color:#656565;
+	font-weight:300;
+}
+
+/* Mobile */
+@media screen and (max-width : 520px) {
+
+#slide1 p {
+	width:95%;
+}
+}
+
+
+h5,ol,ul,li
+{
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	vertical-align:baseline;
+}
+
+#footer
+{
+	background:#e5e5e5;
+	padding-bottom:50px;
+	border-top:1px solid #ddd;
+	padding-top:50px;
+	color:#FFF;
+}
+
+#footer .footer_links
+{
+	width:200px;
+	float:left;
+}
+
+#footer .footer_links h5
+{
+	line-height:1.4;
+	color:#444;
+}
+
+/* fonts to links like Facebook & Twitter */
+#footer .footer_links a
+{
+	color:#555;
+	font-size:16px;
+	text-decoration:none;
+	line-height:1.4;
+}
+
+/* when you hover over any of the links they go blue! */
+#footer .footer_links a:hover
+{
+	color:#2892c6;
+}
+
+/* All Right Reserved section */
+#footer #rights
+{
+	float:right;
+	color:#aaa;
+	letter-spacing:1px;
+}
+
+
+
+
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+
+#logo {
+	width: 100%;
+	text-align: center;
+}
+
+#nav {
+	width:95%;
+	text-align:center;
+	margin:10px 0;
+}
+
+.navigation{
+	width: 100%;
+	float: center;
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+.navigation li{
+	float: left;
+	width:20%;
+	padding:0;
+}
+
+.navigation signin a{
+	float: left;
+	font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #2892c6;
+	padding: 8px 12px;
+	border: 1px solid #999;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px #eee;
+	margin-left: 40px;
+	border-color:#2892c6;
+}
+
+.slide{
+	background-attachment: fixed;
+	width: 100%;
+	position: relative;
+	padding-bottom: 150px;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 150px;
+}
+
+#decorative {
+	display:none;
+}
+
+#content {
+	text-align:center;
+	width:100%;
+}
+
+#slide1 h1 {
+	line-height: 1em;
+}
+#slide1 h2 {
+	line-height: 1em;
+}
+#slide2 h1 {
+	line-height: 1em;
+}
+#slide2 h2 {
+	line-height: 1em;
+}
+#slide3 h1 {
+	line-height: 1em;
+}
+#slide3 h2 {
+	line-height: 1em;
+}
+#slide4 h1 {
+	line-height: 1em;
+}
+#slide4 h2 {
+	line-height: 1em;
+}
+
+}
+
+
+
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+
+#logo {
+	width: 100%;
+	text-align: center;
+}
+
+#nav {
+	width:100%;
+	margin:5px 0;
+}
+
+.navigation{
+	width: 100%;
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+.navigation li{
+	float: left;
+	width:20%;
+}
+
+.navigation signin a{
+	float: left;
+	font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #2892c6;
+	padding: 8px 12px;
+	border: 1px solid #999;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px #eee;
+	margin-left: 40px;
+	border-color:#2892c6;
+}
+
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	position: relative;
+	padding:150px 0;
+}
+
+
+#slide1 h1 {
+	line-height: 1em;
+}
+#slide1 h2 {
+	line-height: 1em;
+}
+#slide2 h1 {
+	line-height: 1em;
+}
+#slide2 h2 {
+	line-height: 1em;
+}
+#slide3 h1 {
+	line-height: 1em;
+}
+#slide3 h2 {
+	line-height: 1em;
+}
+#slide4 h1 {
+	line-height: 1em;
+}
+#slide4 h2 {
+	line-height: 1em;
+}
+
+
+}
