@@ -1,0 +1,170 @@
+/**************
+*
+* screen.css
+*
+/**************/
+
+/* ------- HTML ELEMENTS ------- */
+
+html {
+	padding-bottom: 0px; 
+	padding-top: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+body { 
+	font-family:'Source Sans Pro', sans-serif; 
+	background: #dedede;
+	padding: 0px; 
+	color:#414141;
+	font-size:16px;
+	margin: 0 auto;
+	
+}
+
+@font-face{
+	font-family:'Source Sans Pro', sans-serif; 
+src: url('fonts/DroidSans.ttf') format('truetype');
+}
+
+@font-face{
+font-family:'Source Sans Pro', sans-serif; 
+src: url('fonts/DroidSans-Bold.ttf') format('truetype');
+}
+
+.white {
+	padding: 40px 40px;
+	-moz-border-radius: .5em;
+	-webkit-border-radius: .5em;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	background-color: #fff;
+	margin: 20px auto;
+	max-width: 500px;
+	text-align: center;
+}
+
+
+
+
+
+
+/* ------- ATTRACTIONS ------- */
+
+.toggleOnDarkleft {
+	font-family:'Source Sans Pro', sans-serif;
+	//text-transform:uppercase;
+	color: #fff;
+	-moz-border-radius-topleft: 0.5em; 
+	-moz-border-radius-bottomleft: 0.5em;
+	-webkit-border-top-left-radius: 0.5em; 
+	-webkit-border-bottom-left-radius: 0.5em;
+
+	padding: 6px 10px;
+	-moz-box-shadow: 
+		inset rgba(0, 0, 0, 0.8) 0 0px 14px, 
+		inset rgba(0, 0, 0, 1) 0 2px 2px, 
+		rgba(255, 255, 255, 0.1) 0 1px;
+	background-color: #2892c6;
+	display: inline;
+}
+
+.toggleOffDarkright {
+	font-family:'Source Sans Pro', sans-serif;
+	//text-transform:uppercase;
+	color: #2892c6;
+	padding: 4px 16px;
+	-moz-border-radius-topright: 0.5em; 
+	-moz-border-radius-bottomright: 0.5em;
+	-webkit-border-top-right-radius: 0.5em; 
+	-webkit-border-bottom-right-radius: 0.5em;
+	border-top: 2px solid #2892c6;
+	border-left: 1px solid #2892c6;
+	border-right: 2px solid #2892c6;
+	border-bottom: 2px solid #2892c6;
+	-moz-border-top-colors:#2892c6 #2892c6 #2892c6 #2892c6;
+	-moz-border-right-colors:#2892c6 #2892c6 #2892c6 #2892c6;
+	-moz-border-left-colors:#2892c6 #2892c6 #2892c6 #2892c6;
+	-moz-border-bottom-colors:#2892c6 #2892c6 #2892c6 #2892c6;
+	background: #fff;
+	display: inline;
+}
+
+.toggleOffDarkmid {
+	font-family:'Source Sans Pro', sans-serif;
+	//text-transform:uppercase;
+	color: #2892c6;
+	padding: 4px 20px;
+	border-top: 2px solid #2892c6;
+	border-left: 1px solid #2892c6;
+	border-right: 1px solid #2892c6;
+	border-bottom: 2px solid #2892c6;
+	-moz-border-top-colors:#2892c6 #2892c6 #2892c6 #2892c6;
+	-moz-border-right-colors:#2892c6 #2892c6 #2892c6 #2892c6;
+	-moz-border-left-colors:#2892c6 #2892c6 #2892c6 #2892c6;
+	-moz-border-bottom-colors:#2892c6 #2892c6 #2892c6 #2892c6;
+	background: #fff;
+	display: inline;
+}
+
+/* ------- DEALS ------- */
+
+
+.toggleOffDarkleft {
+	font-family:'Source Sans Pro', sans-serif;
+	//text-transform:uppercase;
+	color: #2892c6;
+	padding: 4px 8px;
+	-moz-border-radius-topleft: 0.5em; 
+	-moz-border-radius-bottomleft: 0.5em;
+	-webkit-border-top-left-radius: 0.5em; 
+	-webkit-border-bottom-left-radius: 0.5em;
+	border-top: 2px solid #2892c6;
+	border-left: 2px solid #2892c6;
+	border-right: 1px solid #2892c6;
+	border-bottom: 2px solid #2892c6;
+	-moz-border-top-colors:#2892c6 #2892c6 #2892c6 #2892c6;
+	-moz-border-right-colors:#2892c6 #2892c6 #2892c6 #2892c6;
+	-moz-border-left-colors:#2892c6 #2892c6 #2892c6 #2892c6;
+	-moz-border-bottom-colors:#2892c6 #2892c6 #2892c6 #2892c6;
+	background: #fff;
+	display: inline;
+}
+
+.toggleOnDarkmid {
+	font-family:'Source Sans Pro', sans-serif;
+	//text-transform:uppercase;
+	color: #fff;
+	padding: 6px 22px;
+	-moz-box-shadow: 
+		inset rgba(0, 0, 0, 0.8) 0 0px 14px, 
+		inset rgba(0, 0, 0, 1) 0 2px 2px, 
+		rgba(255, 255, 255, 0.1) 0 1px;
+	background-color: #2892c6;
+	display: inline;
+}
+
+/* ------- EVENTS ------- */
+
+.toggleOnDarkright {
+	font-family:'Source Sans Pro', sans-serif;
+	//text-transform:uppercase;
+	color: #fff;
+	-moz-border-radius-topright: 0.5em; 
+	-moz-border-radius-bottomright: 0.5em;
+	-webkit-border-top-right-radius: 0.5em; 
+	-webkit-border-bottom-right-radius: 0.5em;
+	padding: 6px 18px;
+	-moz-box-shadow: 
+		inset rgba(0, 0, 0, 0.8) 0 0px 14px, 
+		inset rgba(0, 0, 0, 1) 0 2px 2px, 
+		rgba(255, 255, 255, 0.1) 0 1px;
+	background-color: #2892c6;
+	display: inline;
+}
+
+
+

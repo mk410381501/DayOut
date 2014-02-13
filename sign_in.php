@@ -15,7 +15,7 @@
 	<section id="content">
     
     <form form name="login" method="post" action="loginprocess.php" accept-charset="utf-8">
-<a href="Home_Page.php"><img src="logoheadercopy.png"></a>
+<a href="Home_Page.php"><img src="images/logoheadercopy.png"></a>
 			<h1></h1>
 		  <div>
 				<input type="text" name="email" placeholder="example@dayout.com" required id="username" />

@@ -7,7 +7,8 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,400italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/dashboard.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/deals.css" type="text/css" media="screen">
+    	<link rel="stylesheet" href="css/test.css" type="text/css" media="screen">
     
     <?php
 include "config.php";
@@ -28,9 +29,9 @@ include "information.php";
 
 		  <div id="nav" class="grid_9 omega">
 				<ul class="navigation">
-					<li><a href="dashboard.php"><b>HOME</b></a></li>
+					<li><a href="dashboard.php">HOME</a></li>
 					<li><a href="">LIBRARY</a></li>
-					<li><a href="dashboard-deals.php">ADD ITEMS</a></li>
+					<li><a href="dashboard-deals.php"><b>ADD ITEMS</b></a></li>
 					<li><a href="">YOUR BUSINESS</a></li>
                   <li> 
                   	<signin><a href="logout.php">Log Out</a>
@@ -48,16 +49,9 @@ include "information.php";
 		<div class="container clearfix">
 
 			<div id="content" class="grid_12">
-				<h3><?php 
-			session_start();
-			echo 'Welcome, ', $_SESSION['bname']; ?>
-            </h3>
+				<h3>DEALS</h3>
                 <h3></h3>
-                <p>The oldest classical Greek and Latin writing had little or no spaces between words, and could be written in boustrophedon (alternating directions). Over time, text direction (left to right) became standardized, and word dividers and terminal punctuation became common. The first way to divide sentences into groups was the original paragraphos, similar to an underscore at the beginning of the new group.</p>
-<br></br>
-<p>The oldest classical Greek and Latin writing had little or no spaces between words, and could be written in boustrophedon (alternating directions). Over time, text direction (left to right) became standardized, and word dividers and terminal punctuation became common.</p>
-			
-      
+                <p><div class="toggleOffDarkleft"><a href="dashboard-attractions.php">Attractions</a></div><div class="toggleOnDarkmid"><a href="dashboard-deals.php">Deals</a></div><div class="toggleOffDarkright"><a href="dashboard-events.php">Events</a></div></p>
 
 			</div>
 		</div>

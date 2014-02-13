@@ -18,7 +18,7 @@
   <body class="idv">
   
   <div id="fixed_header">
-	<a href="Home_Page.php" id="logo"><img alt="Logo dark" src="logoheadercopy.png" /></a>
+	<a href="Home_Page.php" id="logo"><img alt="Logo dark" src="images/logoheadercopy.png" /></a>
     
 
 </div>
