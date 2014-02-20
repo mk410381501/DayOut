@@ -1,0 +1,25 @@
+<!-- 
+  This template gets placed in the Pet tab's <nav-view> directive.
+  It was wired up in the app config (app.js) 
+  The 'pets' data comes from its $scope within PetIndexCtrl (controller.js)
+-->
+<view title="'Events'">
+  <content has-header="true" has-tabs="true">
+      
+      <list>
+      <div ng-repeat="pet in pets" class="list card" href="#/tab/pet/{{pet.id}}">
+          
+          <div class="item item-image" href="#/tab/pet/{{pet.id}}">
+              <img src="cover.jpg">
+                  
+                  <a class="item item-icon-left assertive" href="#/tab/pet/{{pet.id}}">
+                      <h2>{{pet.title}}</h2>
+                      <p>{{pet.bname}}</p>
+                  </a>
+                  </div>
+          
+      </div>
+      </list>
+
+  </content>
+</view>

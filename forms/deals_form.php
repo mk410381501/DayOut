@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="form.css" type="text/css" media="screen">
  
 <body>
-<form action="upload_deals.php" method="post"
+<form action="forms/upload_deals.php" method="post"
 enctype="multipart/form-data">
  
 <table align="center" cellpadding = "8">

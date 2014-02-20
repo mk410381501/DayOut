@@ -2,12 +2,13 @@
 <html>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,400italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="form.css" type="text/css" media="screen">
+
  
 <body>
-<form action="upload_event.php" method="post"
+<form action="forms/upload_event.php" method="post"
 enctype="multipart/form-data">
  
-<table align="center" cellpadding = "8">
+<table align="center" cellpadding = "12">
  
 <!----- First Name ---------------------------------------------------------->
 <tr>

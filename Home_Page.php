@@ -11,6 +11,12 @@
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    
+    <!-- CSS for the popup -->
+   <link rel="stylesheet" type="text/css" href="css/sign_in.css" />
+	<link rel="stylesheet" href="css/avgrund.css">
+
+
 	<!-- <link rel="stylesheet" href="css/style.min.css" type="text/css" media="screen"> -->
 	<!--[if IE]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
@@ -32,7 +38,7 @@
 					<li data-slide="4">PRICING</li>
                   <li> 
                   	<signin>
-                 		 <a href="sign_in.php">Sign In</a>
+                 		 <a href="#" id="show">Sign In</a>
                   	</signin>
                   </li>
                     
@@ -168,5 +174,24 @@
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 	<!-- <script type="text/javascript" src="js/scripts.min.js"></script> -->
+
+<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
+	<script src="js/jquery.avgrund.js"></script>
+	<script>
+	$(function() {
+		$('#show').avgrund({
+			height: 30000,
+			holderClass: 'custom',
+			showClose: true,
+			showCloseText: 'close',
+			onBlurContainer: '.containerrr',
+			template: '<section id="conntent">' +
+			'<form form name="login" action="loginprocess.php" method="post"  accept-charset="utf-8">' +
+			'<a href="Home_Page.php"><img src="images/logoheadercopy.png"></a>' +
+			'<h1></h1>' + '<div>' + '<input type="text" name="email" placeholder="example@dayout.com" required id="username" />' + '</div>' + '<div>' + '<input type="password" name="password" placeholder="Password" required id="password" />' + '</div>' + '<div>' + '<input type="submit" id="submit" name="submit" value="Log In">' + '</div>' + '</form>' + '</section>'
+					
+		});
+	});
+	</script>
 </body>
 </html>

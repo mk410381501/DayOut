@@ -7,14 +7,15 @@
 <meta charset="utf-8">
 <title>DayOut Sign In</title>
 <link rel="stylesheet" type="text/css" href="css/sign_in.css" />
+	<link rel="stylesheet" href="css/avgrund.css">
 </head>
 <body>
-
+<!-- action="loginprocess.php" -->
 
 <div class="container">
 	<section id="content">
     
-    <form form name="login" method="post" action="loginprocess.php" accept-charset="utf-8">
+    <form form name="login" action="loginprocess.php" method="post"  accept-charset="utf-8">
 <a href="Home_Page.php"><img src="images/logoheadercopy.png"></a>
 			<h1></h1>
 		  <div>
@@ -25,12 +26,10 @@
 			</div>
 			<div>
             
-            <input type="submit" name="submit" value="Log In"> 
+            <input type="submit" id="submit" name="submit" value="Log In"> 
 
 		  </div>
 		</form>
-    
-    
  
 	</section><!-- content -->
 </div><!-- container -->

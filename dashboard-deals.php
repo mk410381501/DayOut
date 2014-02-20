@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/deals.css" type="text/css" media="screen">
     	<link rel="stylesheet" href="css/test.css" type="text/css" media="screen">
+                <link rel="stylesheet" href="forms/form.css" type="text/css" media="screen">
     
     <?php
 include "config.php";
@@ -53,9 +54,17 @@ include "information.php";
                 <h3></h3>
                 <p><div class="toggleOffDarkleft"><a href="dashboard-attractions.php">Attractions</a></div><div class="toggleOnDarkmid"><a href="dashboard-deals.php">Deals</a></div><div class="toggleOffDarkright"><a href="dashboard-events.php">Events</a></div></p>
 
+
+
 			</div>
 		</div>
 	</div>
+    
+    <div id="event_table">
+                
+                <?php include"forms/deals_form.php";?>
+                <br></br>
+                </div>
 
 
     

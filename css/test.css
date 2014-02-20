@@ -6,22 +6,22 @@
 
 /* ------- HTML ELEMENTS ------- */
 
-html {
+/* html {
 	padding-bottom: 0px; 
 	padding-top: 40px;
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
-body { 
-	font-family:'Source Sans Pro', sans-serif; 
+body {
+	font-family: 'Source Sans Pro', sans-serif;
 	background: #dedede;
-	padding: 0px; 
-	color:#414141;
-	font-size:16px;
+	padding: 0px;
+	color: #414141;
+	font-size: 16px;
 	margin: 0 auto;
-	
-}
+	text-align: left;	
+} */
 
 @font-face{
 	font-family:'Source Sans Pro', sans-serif; 
@@ -56,7 +56,6 @@ src: url('fonts/DroidSans-Bold.ttf') format('truetype');
 
 .toggleOnDarkleft {
 	font-family:'Source Sans Pro', sans-serif;
-	//text-transform:uppercase;
 	color: #fff;
 	-moz-border-radius-topleft: 0.5em; 
 	-moz-border-radius-bottomleft: 0.5em;
@@ -74,7 +73,6 @@ src: url('fonts/DroidSans-Bold.ttf') format('truetype');
 
 .toggleOffDarkright {
 	font-family:'Source Sans Pro', sans-serif;
-	//text-transform:uppercase;
 	color: #2892c6;
 	padding: 4px 16px;
 	-moz-border-radius-topright: 0.5em; 
@@ -95,7 +93,6 @@ src: url('fonts/DroidSans-Bold.ttf') format('truetype');
 
 .toggleOffDarkmid {
 	font-family:'Source Sans Pro', sans-serif;
-	//text-transform:uppercase;
 	color: #2892c6;
 	padding: 4px 20px;
 	border-top: 2px solid #2892c6;
@@ -115,7 +112,6 @@ src: url('fonts/DroidSans-Bold.ttf') format('truetype');
 
 .toggleOffDarkleft {
 	font-family:'Source Sans Pro', sans-serif;
-	//text-transform:uppercase;
 	color: #2892c6;
 	padding: 4px 8px;
 	-moz-border-radius-topleft: 0.5em; 
@@ -136,7 +132,6 @@ src: url('fonts/DroidSans-Bold.ttf') format('truetype');
 
 .toggleOnDarkmid {
 	font-family:'Source Sans Pro', sans-serif;
-	//text-transform:uppercase;
 	color: #fff;
 	padding: 6px 22px;
 	-moz-box-shadow: 
@@ -151,7 +146,6 @@ src: url('fonts/DroidSans-Bold.ttf') format('truetype');
 
 .toggleOnDarkright {
 	font-family:'Source Sans Pro', sans-serif;
-	//text-transform:uppercase;
 	color: #fff;
 	-moz-border-radius-topright: 0.5em; 
 	-moz-border-radius-bottomright: 0.5em;
@@ -165,6 +159,3 @@ src: url('fonts/DroidSans-Bold.ttf') format('truetype');
 	background-color: #2892c6;
 	display: inline;
 }
-
-
-

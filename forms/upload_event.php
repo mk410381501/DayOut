@@ -1,13 +1,13 @@
 <?php
 include "config_copy.php";
 
-$event_name = $_POST['Event_Name'];
-$event_info = $_POST['Event_info'];
-$event_price = ($_POST['Event_price']);
+$event_name = mysql_real_escape_string($_POST['Event_Name']);
+$event_info = mysql_real_escape_string($_POST['Event_info']);
+$event_price = $_POST['Event_price'];
 $event_day = $_POST['Event_day'];
 $event_month = $_POST['Event_Month'];
 $event_year = $_POST['Event_Year'];
-$event_online = $_POST['Event_booking'];
+$event_online = mysql_real_escape_string($_POST['Event_booking']);
 $event_contact = $_POST['Event_contact'];
 
 /* This script has some restrictions to the file upload. The user may upload .gif, .jpeg, and .png files; and the file size must be under 80 kB: */
@@ -40,9 +40,11 @@ if ((($image_type == "image/gif")
     echo "Type: " . $image_type . "<br>";
     echo "Size: " . ($image_size / 1024) . " kB<br>";
     echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
+    // redirect somewhere
 
     if (file_exists("upload/" . $image_name))
       {
+      // redirect somewhere and let user know it already exists
       echo $image_name . " already exists. ";
       }
     else
@@ -53,6 +55,7 @@ mysql_query("INSERT INTO Events (event_name, event_info, event_price, event_day,
       move_uploaded_file($_FILES["file"]["tmp_name"],
       "upload/" . $image_name);
       echo "Stored in: " . "upload/" . $image_name;
+      echo "SUCCESSFULLY ADDED EVENT";
       }
     }
   }

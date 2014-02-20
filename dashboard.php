@@ -9,12 +9,6 @@
 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/dashboard.css" type="text/css" media="screen">
     
-    <?php
-include "config.php";
-include "loginprocess.php";
-include "information.php";
-?>
-
 </head>
 
 <body>
@@ -48,9 +42,11 @@ include "information.php";
 		<div class="container clearfix">
 
 			<div id="content" class="grid_12">
-				<h3><?php 
+				<h3>
+				<?php 
 			session_start();
-			echo 'Welcome, ', $_SESSION['bname']; ?>
+			echo 'Your ID is... ', $_SESSION['id']; 
+			?>
             </h3>
                 <h3></h3>
                 <p>The oldest classical Greek and Latin writing had little or no spaces between words, and could be written in boustrophedon (alternating directions). Over time, text direction (left to right) became standardized, and word dividers and terminal punctuation became common. The first way to divide sentences into groups was the original paragraphos, similar to an underscore at the beginning of the new group.</p>

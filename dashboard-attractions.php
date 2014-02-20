@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/deals.css" type="text/css" media="screen">
     	<link rel="stylesheet" href="css/test.css" type="text/css" media="screen">
+             <link rel="stylesheet" href="forms/form.css" type="text/css" media="screen">
     
     <?php
 include "config.php";
@@ -57,6 +58,11 @@ include "information.php";
 		</div>
 	</div>
 
+    <div id="event_table">
+                
+                <?php include"forms/attractions_form.php";?>
+                <br></br>
+                </div>
 
     
     <div id="footer">

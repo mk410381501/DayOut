@@ -1,13 +1,13 @@
 <?php
 include "config_copy.php";
 
-$attraction_name = $_POST['Attraction_Name'];
-$attraction_info = $_POST['A_Information'];
+$attraction_name = mysql_real_escape_string($_POST['Attraction_Name']);
+$attraction_info = mysql_real_escape_string($_POST['A_Information']);
 
-$attraction_address1 = ($_POST['Address1']);
-$attraction_address2 = ($_POST['Address2']);
-$attraction_address3 = ($_POST['Address3']);
-$attraction_address4 = ($_POST['Address4']);
+$attraction_address1 = mysql_real_escape_string($_POST['Address1']);
+$attraction_address2 = mysql_real_escape_string($_POST['Address2']);
+$attraction_address3 = mysql_real_escape_string($_POST['Address3']);
+$attraction_address4 = mysql_real_escape_string($_POST['Address4']);
 
 $attraction_price = $_POST['A_Price'];
 $attraction_day = $_POST['Att_day'];
@@ -15,9 +15,10 @@ $attraction_month = $_POST['Att_Month'];
 $attraction_year = $_POST['Att_Year'];
 
 $attraction_contact = $_POST['Att_Contact'];
-$attraction_booking = $_POST['Att_Booking'];
+$attraction_booking = mysql_real_escape_string($_POST['Att_Booking']);
 
-/* This script has some restrictions to the file upload. The user may upload .gif, .jpeg, and .png files; and the file size must be under 80 kB: */
+/* This script has some restrictions to the file upload. 
+The user may upload .gif, .jpeg, and .png files; and the file size must be under 80 kB: */
 
 $image = file_get_contents($_FILES['image']['tmp_name']);
 
@@ -47,9 +48,11 @@ if ((($image_type == "image/gif")
     echo "Type: " . $image_type . "<br>";
     echo "Size: " . ($image_size / 1024) . " kB<br>";
     echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
+    // redirect somewhere
 
     if (file_exists("upload/" . $image_name))
       {
+      // redirect somewhere and let user know it already exists
       echo $image_name . " already exists. ";
       }
     else
@@ -59,7 +62,8 @@ mysql_query("INSERT INTO Attractions (attraction_name, attraction_info, attracti
 		  
       move_uploaded_file($_FILES["file"]["tmp_name"],
       "upload/" . $image_name);
-      echo "Stored in: " . "upload/" . $image_name;
+      echo "Stored in: " . "upload/" . $image_name;     
+      echo "SUCCESSFULLY ADDED ATTRACTION";
       }
     }
   }

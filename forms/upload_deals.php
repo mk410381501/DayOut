@@ -1,14 +1,14 @@
 <?php
 include "config_copy.php";
 
-$item_name = $_POST['Item_Name'];
-$item_info = $_POST['Item_Info'];
-$item_price = ($_POST['Item_Price']);
+$item_name = mysql_real_escape_string($_POST['Item_Name']);
+$item_info = mysql_real_escape_string($_POST['Item_Info']);
+$item_price = $_POST['Item_Price'];
 $item_day = $_POST['Item_Day'];
 $item_month = $_POST['Item_Month'];
 $item_year = $_POST['Item_Year'];
 $item_contact = $_POST['Item_Contact'];
-$item_booking = $_POST['Item_Booking'];
+$item_booking = mysql_real_escape_string($_POST['Item_Booking']);
 
 /* This script has some restrictions to the file upload. The user may upload .gif, .jpeg, and .png files; and the file size must be under 80 kB: */
 
@@ -40,9 +40,11 @@ if ((($image_type == "image/gif")
     echo "Type: " . $image_type . "<br>";
     echo "Size: " . ($image_size / 1024) . " kB<br>";
     echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
+    // redirect somewhere
 
     if (file_exists("upload/" . $image_name))
       {
+      // redirect somewhere and let user know it already exists
       echo $image_name . " already exists. ";
       }
     else
@@ -53,6 +55,7 @@ mysql_query("INSERT INTO Deals (item_name, item_info, item_price, item_day, item
       move_uploaded_file($_FILES["file"]["tmp_name"],
       "upload/" . $image_name);
       echo "Stored in: " . "upload/" . $image_name;
+      echo "SUCCESSFULLY ADDED DEAL";
       }
     }
   }
