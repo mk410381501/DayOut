@@ -7,7 +7,7 @@ $password = ($_POST['password']);
 $submit = ($_POST['submit']);
 
 	$query = mysql_query("SELECT * FROM `User` WHERE email = '$email' AND password = md5('$password')");
-	$data = mysql_num_rows($query);
+	$data = mysql_fetch_array($query);
 		
 	if(mysql_num_rows($query)){
 		session_start();

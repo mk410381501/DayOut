@@ -2192,6 +2192,7 @@ infinite-scroll.active .scroll-infinite {
   position: absolute;
   z-index: 1; }
 
+/** USING - background colour and size **/
 .pane, .view {
   top: 0;
   right: 0;
@@ -2199,7 +2200,7 @@ infinite-scroll.active .scroll-infinite {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #dddddd;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
@@ -2540,9 +2541,6 @@ a.subdued {
     color: #fff; }
     .bar.bar-positive .title {
       color: #fff;
-      margin-top: 16px;
-       }
-    .ion-ios7-arrow-back {
       margin-top: 16px;
        }
   
@@ -3051,8 +3049,6 @@ a.subdued {
   width: 275px;
   background-color: #fff; }
 
-.menu-content {
-  box-shadow: -1px 0px 2px rgba(0, 0, 0, 0.2), 1px 0px 2px rgba(0, 0, 0, 0.2); }
 
 .menu-left {
   left: 0; }
@@ -3497,6 +3493,7 @@ a.item-icon-right:after, button.item-icon-right:after, a.item-button-right:after
   text-align: right; }
   .item-image img:first-child, .item-image .list-img {
     max-height: 150px;
+    border-top-right-radius:2em;
     width: 100%;
     vertical-align: middle; }
 
@@ -3688,7 +3685,7 @@ a.item-icon-right:after, button.item-icon-right:after, a.item-button-right:after
 .card {
   padding-top: 1px;
   padding-bottom: 1px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+   }
 
 .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
   border-top-left-radius: 2px;

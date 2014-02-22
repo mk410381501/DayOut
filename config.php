@@ -11,4 +11,6 @@ or die("Something is broken!");
 mysql_select_db($dbname, $connect)
 or die("Couldn't find database");
 
+session_start();
+
 ?>

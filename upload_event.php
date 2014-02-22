@@ -1,14 +1,15 @@
 <?php
-include "config_copy.php";
 
-$item_name = mysql_real_escape_string($_POST['Item_Name']);
-$item_info = mysql_real_escape_string($_POST['Item_Info']);
-$item_price = $_POST['Item_Price'];
-$item_day = $_POST['Item_Day'];
-$item_month = $_POST['Item_Month'];
-$item_year = $_POST['Item_Year'];
-$item_contact = $_POST['Item_Contact'];
-$item_booking = mysql_real_escape_string($_POST['Item_Booking']);
+include "config.php";
+
+$event_name = mysql_real_escape_string($_POST['Event_Name']);
+$event_info = mysql_real_escape_string($_POST['Event_info']);
+$event_price = $_POST['Event_price'];
+$event_day = $_POST['Event_day'];
+$event_month = $_POST['Event_Month'];
+$event_year = $_POST['Event_Year'];
+$event_online = mysql_real_escape_string($_POST['Event_booking']);
+$event_contact = $_POST['Event_contact'];
 
 /* This script has some restrictions to the file upload. The user may upload .gif, .jpeg, and .png files; and the file size must be under 80 kB: */
 
@@ -50,13 +51,13 @@ if ((($image_type == "image/gif")
     else
       {
 		  
-mysql_query("INSERT INTO Deals (item_name, item_info, item_price, item_day, item_month, item_year, item_contact, item_booking, image_name, image) VALUES ('$item_name', '$item_info', '$item_price', '$item_day', '$item_month', '$item_year', '$item_contact', '$item_booking', '$image_name', '$image')");
+mysql_query("INSERT INTO Events (event_name, event_info, event_price, event_day, event_month, event_year, event_online, event_contact, image_name, image, user_id) VALUES ('$event_name', '$event_info', '$event_price', '$event_day', '$event_month', '$event_year', '$event_online', '$event_contact', '$image_name', '$image',".$_SESSION['id'].")");
 		  
       move_uploaded_file($_FILES["file"]["tmp_name"],
       "upload/" . $image_name);
       echo "Stored in: " . "upload/" . $image_name;
-      echo "SUCCESSFULLY ADDED DEAL";
-      }
+      echo "SUCCESSFULLY ADDED EVENT";
+    }
     }
   }
 else

@@ -8,8 +8,8 @@ angular.module('starter.services', [])
 
   // Some fake testing data
   var pets = [
-    { id: 0, title: 'Tomorrowland 2014', description: 'Furry little creatures. Obsessed with plotting assassination, but never following through on it.', bname: 'Tomorrowland' },
-    { id: 1, title: 'Trinity Ball 2014', description: 'Lovable. Loyal almost to a fault. Smarter than they let on.', bname: 'MCD Promotions' },
+    { id: 0, title: 'Tomorrowland 2014', description: 'nvjvnj', bname: 'Tomorrowland' },
+    { id: 1, title: 'Trinity Ball 2014', description: 'jnfl', bname: 'MCD Promotions' },
       ];
 
   return {

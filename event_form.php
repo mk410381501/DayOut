@@ -1,51 +1,51 @@
 <!doctype html>
 <html>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,400italic' rel='stylesheet' type='text/css'>
-
 <link rel="stylesheet" href="form.css" type="text/css" media="screen">
+
  
 <body>
-<form action="forms/upload_deals.php" method="post"
+<form action="upload_event.php" method="post"
 enctype="multipart/form-data">
  
-<table align="center" cellpadding = "8">
+<table align="center" cellpadding = "12">
  
 <!----- First Name ---------------------------------------------------------->
 <tr>
-<td>Item Name *</td>
-<td><input type="text" name="Item_Name" maxlength="30" placeholder="Name" required/>
+<td>Event Name *</td>
+<td><input type="text" name="Event_Name" maxlength="30" placeholder="Name" required/>
 </td>
 </tr>
 
 <!----- Event Picture ---------------------------------------------------------->
 <tr>
-<td><label for="file">Picture *</label></td>
-<td><input type="file" name="file" id="file" required/>
-  <div id="info">Maximum size 80KB</div></td>
+<td><label for="file">Event Picture *</label></td>
+<td><input type="file" name="file" id="file" required/> <div id="info">Maximum size 80KB</div>
+</td>
 </tr>
 
 
 <!----- Address ---------------------------------------------------------->
 <tr>
-<td>Item Information *<br /><br /><br /></td>
-<td><textarea name="Item_Info" rows="6" cols="50" placeholder="Enter details about this event." required></textarea></td>
+<td>Event Information *<br /><br /><br /></td>
+<td><textarea name="Event_info" rows="6" cols="50" placeholder="Enter details about this event." required></textarea></td>
 </tr>
 
  
 <!----- Price ---------------------------------------------------------->
 <tr>
 <td>Price *</td>
-<td><input type="text" name="Item_Price" maxlength="30" placeholder="Euros" required/>
+<td><input type="text" name="Event_price" maxlength="30" placeholder="Euros" required/>
 
 </td>
 </tr>
  
 <!----- Event Date -------------------------------------------------------->
 <tr>
-<td>Expiry Date *</td>
+<td>Event Date *</td>
  
 <td>
-<select name="Item_Day" id="Item_Day">
+<select name="Event_day" id="Event_Day">
 <option value="-1">Day</option>
 <option value="1">1</option>
 <option value="2">2</option>
@@ -84,7 +84,7 @@ enctype="multipart/form-data">
 <option value="31">31</option>
 </select>
  
-<select id="Item_Month" name="Item_Month">
+<select id="Event_Month" name="Event_Month">
 <option value="-1">Month</option>
 <option value="January">Jan</option>
 <option value="February">Feb</option>
@@ -100,34 +100,35 @@ enctype="multipart/form-data">
 <option value="December">Dec</option>
 </select>
  
-<select name="Item_Year" id="Item_Year">
+<select name="Event_Year" id="Event_Year">
  
 <option value="-1">Year</option>
-<option value="2011">2016</option>
-<option value="2011">2015</option>
-<option value="2012">2014</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
 
 </select>
-</td>
-</tr>
-
-<!----- Booking Contact ---------------------------------------------------------->
-<tr>
-<td>Contact Information *</td>
-<td>
-    <input type="text" name="Item_Contact" maxlength="10000" placeholder="Contact No." required/>
-  
 </td>
 </tr>
  
 <!----- Online Booking ---------------------------------------------------------->
 <tr>
-<td>Online Booking</td>
+<td>Online Booking *</td>
 <td>
   <p>
-    <input type="text" name="Item_Booking" maxlength="10000" placeholder="Website URL" />
+    <input type="text" name="Event_booking" placeholder="Website URL" required/>
 </td>
 </tr>
+ 
+<!----- Booking Contact ---------------------------------------------------------->
+<tr>
+<td>Booking Contact *</td>
+<td>
+    <input type="text" name="Event_contact" maxlength="10000" placeholder="Contact No." required/>
+  
+</td>
+</tr>
+
  
 <!----- Submit and Reset ------------------------------------------------->
 <tr>

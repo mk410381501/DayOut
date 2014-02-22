@@ -1,5 +1,5 @@
 <?php
-include "config_copy.php";
+include "config.php";
 
 $attraction_name = mysql_real_escape_string($_POST['Attraction_Name']);
 $attraction_info = mysql_real_escape_string($_POST['A_Information']);
@@ -58,7 +58,7 @@ if ((($image_type == "image/gif")
     else
       {
 		  
-mysql_query("INSERT INTO Attractions (attraction_name, attraction_info, attraction_address1, attraction_address2, attraction_address3, attraction_address4, attraction_price, attraction_day, attraction_month, attraction_year, attraction_contact, attraction_booking, image_name, image) VALUES ('$attraction_name', '$attraction_info', '$attraction_address1', '$attraction_address2', '$attraction_address3', '$attraction_address4', '$attraction_price', '$attraction_day', '$attraction_month', '$attraction_year', '$attraction_contact', '$attraction_booking', '$image_name', '$image')");
+mysql_query("INSERT INTO Attractions (attraction_name, attraction_info, attraction_address1, attraction_address2, attraction_address3, attraction_address4, attraction_price, attraction_day, attraction_month, attraction_year, attraction_contact, attraction_booking, image_name, image, user_id) VALUES ('$attraction_name', '$attraction_info', '$attraction_address1', '$attraction_address2', '$attraction_address3', '$attraction_address4', '$attraction_price', '$attraction_day', '$attraction_month', '$attraction_year', '$attraction_contact', '$attraction_booking', '$image_name', '$image', ".$_SESSION['id'].")");
 		  
       move_uploaded_file($_FILES["file"]["tmp_name"],
       "upload/" . $image_name);

@@ -9,13 +9,6 @@
 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/deals.css" type="text/css" media="screen">
     	<link rel="stylesheet" href="css/test.css" type="text/css" media="screen">
-        <link rel="stylesheet" href="forms/form.css" type="text/css" media="screen">
-    
-    <?php
-include "config.php";
-include "loginprocess.php";
-include "information.php";
-?>
 
 </head>
 
@@ -31,7 +24,7 @@ include "information.php";
 		  <div id="nav" class="grid_9 omega">
 				<ul class="navigation">
 					<li><a href="dashboard.php">HOME</a></li>
-					<li><a href="">LIBRARY</a></li>
+					<li><a href="dashboard-library.php">LIBRARY</a></li>
 					<li><a href="dashboard-deals.php"><b>ADD ITEMS</b></a></li>
 					<li><a href="">YOUR BUSINESS</a></li>
                   <li> 
@@ -60,7 +53,7 @@ include "information.php";
     
 <div id="event_table">
                 
-                <?php include"forms/event_form.php";?>
+                <?php include"event_form.php";?>
                 <br></br>
                 </div>
 

@@ -1,3 +1,10 @@
+<?php 
+include "config.php";
+
+$query1 = mysql_query("SELECT * FROM `BusinessInfo` WHERE user_id = ".$_SESSION['id']);
+$data1 = mysql_fetch_array($query1);
+?>
+
 <!DOCTYPE HTML>
 <html class="no-js"><!--<![endif]-->
 <head>
@@ -23,7 +30,7 @@
 		  <div id="nav" class="grid_9 omega">
 				<ul class="navigation">
 					<li><a href="dashboard.php"><b>HOME</b></a></li>
-					<li><a href="">LIBRARY</a></li>
+					<li><a href="dashboard-library.php">LIBRARY</a></li>
 					<li><a href="dashboard-deals.php">ADD ITEMS</a></li>
 					<li><a href="">YOUR BUSINESS</a></li>
                   <li> 
@@ -44,8 +51,7 @@
 			<div id="content" class="grid_12">
 				<h3>
 				<?php 
-			session_start();
-			echo 'Your ID is... ', $_SESSION['id']; 
+			echo 'Welcome, '. $data1['b_name'];
 			?>
             </h3>
                 <h3></h3>

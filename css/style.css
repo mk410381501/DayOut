@@ -148,18 +148,18 @@ button{
 	letter-spacing:1px;
 	text-transform:uppercase;
 	
-	border: 1px solid rgba(0, 0, 0, 0.3);
-	background: -webkit-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #64c8ef 0%,#00a2e2 100%); /* W3C */
+	border: 1px solid #00a2e2;
+	background: -webkit-linear-gradient(top,  #00a2e2 0%,#00a2e2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #00a2e2 0%,#00a2e2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #00a2e2 0%,#00a2e2 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #00a2e2 0%,#00a2e2 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64c8ef', endColorstr='#00a2e2',GradientType=0 ); /* IE6-9 */
 	color: #000;
 	padding: 3px 8px;
 	border-radius: 3px;
 	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
 	
-    height:30px; 
+    height:35px; 
     width:150px; 
     margin: -20px -50px; 
     position:relative;
@@ -169,7 +169,7 @@ button{
 
 button:hover {
 	cursor:pointer;
-	background: #3399FF;
+	background: #2892c6;
 }
 
 /* Slide 2 */ 
@@ -387,7 +387,7 @@ h5,ol,ul,li
 
 .navigation li{
 	float: left;
-	width:25%;
+	width:20%;
 	padding:0;
 }
 
@@ -468,7 +468,7 @@ h5,ol,ul,li
 
 .navigation li{
 	float: left;
-	width:25%;
+	width:20%;
 }
 
 .navigation text{

@@ -1,51 +1,60 @@
 <!doctype html>
 <html>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,400italic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="form.css" type="text/css" media="screen">
 
+<link rel="stylesheet" href="form.css" type="text/css" media="screen">
  
 <body>
-<form action="forms/upload_event.php" method="post"
+<form action="upload_attractions.php" method="post"
 enctype="multipart/form-data">
  
 <table align="center" cellpadding = "12">
  
 <!----- First Name ---------------------------------------------------------->
 <tr>
-<td>Event Name *</td>
-<td><input type="text" name="Event_Name" maxlength="30" placeholder="Name" required/>
+<td>Attraction Name *</td>
+<td><input type="text" name="Attraction_Name" maxlength="30" placeholder="Name" required/>
 </td>
 </tr>
 
 <!----- Event Picture ---------------------------------------------------------->
 <tr>
-<td><label for="file">Event Picture *</label></td>
-<td><input type="file" name="file" id="file" required/> <div id="info">Maximum size 80KB</div>
-</td>
+<td><label for="file">Picture *</label></td>
+<td><input type="file" name="file" id="file" required/>
+  <div id="info">Maximum size 80KB</div></td>
+</tr>
+
+<!----- Bio ---------------------------------------------------------->
+<tr>
+<td>Information *<br /><br /><br /></td>
+<td><textarea name="A_Information" rows="6" cols="50" placeholder="What does this attraction include?" required></textarea></td>
 </tr>
 
 
 <!----- Address ---------------------------------------------------------->
 <tr>
-<td>Event Information *<br /><br /><br /></td>
-<td><textarea name="Event_info" rows="6" cols="50" placeholder="Enter details about this event." required></textarea></td>
+<td>Address *<br /><br /><br /></td>
+<td><input type="text" name="Address1" id="Address1" placeholder="Building Name/Number" required/><br />
+<input type="text" name="Address2" id="Address2" placeholder="Street Address" required/><br />
+<input type="text" name="Address3" id="Address3" placeholder="Town" required/><br />
+<input type="text" name="Address4" id="Address4" placeholder="County" required/>
 </tr>
 
  
 <!----- Price ---------------------------------------------------------->
 <tr>
 <td>Price *</td>
-<td><input type="text" name="Event_price" maxlength="30" placeholder="Euros" required/>
+<td><input type="text" name="A_Price" maxlength="30" placeholder="Euros" required/>
 
 </td>
 </tr>
  
-<!----- Event Date -------------------------------------------------------->
+<!----- Attraction Valid Until -------------------------------------------------------->
 <tr>
-<td>Event Date *</td>
+<td>Valid Until</td>
  
 <td>
-<select name="Event_day" id="Event_Day">
+<select name="Att_day" id="Att_day">
 <option value="-1">Day</option>
 <option value="1">1</option>
 <option value="2">2</option>
@@ -84,7 +93,7 @@ enctype="multipart/form-data">
 <option value="31">31</option>
 </select>
  
-<select id="Event_Month" name="Event_Month">
+<select id="Att_Month" name="Att_Month">
 <option value="-1">Month</option>
 <option value="January">Jan</option>
 <option value="February">Feb</option>
@@ -100,14 +109,23 @@ enctype="multipart/form-data">
 <option value="December">Dec</option>
 </select>
  
-<select name="Event_Year" id="Event_Year">
+<select name="Att_Year" id="Att_Year">
  
 <option value="-1">Year</option>
 <option value="2016">2016</option>
 <option value="2015">2015</option>
-<option value="2014">2014</option>
+<option value="2012">2014</option>
 
 </select>
+</td>
+</tr>
+
+<!----- Booking Contact ---------------------------------------------------------->
+<tr>
+<td>Contact Information *</td>
+<td>
+    <input type="text" name="Att_Contact" placeholder="Contact No." required/>
+  
 </td>
 </tr>
  
@@ -116,19 +134,9 @@ enctype="multipart/form-data">
 <td>Online Booking *</td>
 <td>
   <p>
-    <input type="text" name="Event_booking" placeholder="Website URL" required/>
+    <input type="text" name="Att_Booking" placeholder="Website URL" required/>
 </td>
 </tr>
- 
-<!----- Booking Contact ---------------------------------------------------------->
-<tr>
-<td>Booking Contact *</td>
-<td>
-    <input type="text" name="Event_contact" maxlength="10000" placeholder="Contact No." required/>
-  
-</td>
-</tr>
-
  
 <!----- Submit and Reset ------------------------------------------------->
 <tr>

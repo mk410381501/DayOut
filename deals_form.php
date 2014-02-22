@@ -5,15 +5,15 @@
 <link rel="stylesheet" href="form.css" type="text/css" media="screen">
  
 <body>
-<form action="forms/upload_attractions.php" method="post"
+<form action="upload_deals.php" method="post"
 enctype="multipart/form-data">
  
-<table align="center" cellpadding = "8">
+<table align="center" cellpadding = "12">
  
 <!----- First Name ---------------------------------------------------------->
 <tr>
-<td>Attraction Name *</td>
-<td><input type="text" name="Attraction_Name" maxlength="30" placeholder="Name" required/>
+<td>Item Name *</td>
+<td><input type="text" name="Item_Name" maxlength="30" placeholder="Name" required/>
 </td>
 </tr>
 
@@ -24,37 +24,28 @@ enctype="multipart/form-data">
   <div id="info">Maximum size 80KB</div></td>
 </tr>
 
-<!----- Bio ---------------------------------------------------------->
-<tr>
-<td>Information *<br /><br /><br /></td>
-<td><textarea name="A_Information" rows="6" cols="50" placeholder="What does this attraction include?" required></textarea></td>
-</tr>
-
 
 <!----- Address ---------------------------------------------------------->
 <tr>
-<td>Address *<br /><br /><br /></td>
-<td><input type="text" name="Address1" id="Address1" placeholder="Building Name/Number" required/><br />
-<input type="text" name="Address2" id="Address2" placeholder="Street Address" required/><br />
-<input type="text" name="Address3" id="Address3" placeholder="Town" required/><br />
-<input type="text" name="Address4" id="Address4" placeholder="County" required/>
+<td>Item Information *<br /><br /><br /></td>
+<td><textarea name="Item_Info" rows="6" cols="50" placeholder="Enter details about this event." required></textarea></td>
 </tr>
 
  
 <!----- Price ---------------------------------------------------------->
 <tr>
 <td>Price *</td>
-<td><input type="text" name="A_Price" maxlength="30" placeholder="Euros" required/>
+<td><input type="text" name="Item_Price" maxlength="30" placeholder="Euros" required/>
 
 </td>
 </tr>
  
-<!----- Attraction Valid Until -------------------------------------------------------->
+<!----- Event Date -------------------------------------------------------->
 <tr>
-<td>Valid Until</td>
+<td>Expiry Date *</td>
  
 <td>
-<select name="Att_day" id="Att_day">
+<select name="Item_Day" id="Item_Day">
 <option value="-1">Day</option>
 <option value="1">1</option>
 <option value="2">2</option>
@@ -93,7 +84,7 @@ enctype="multipart/form-data">
 <option value="31">31</option>
 </select>
  
-<select id="Att_Month" name="Att_Month">
+<select id="Item_Month" name="Item_Month">
 <option value="-1">Month</option>
 <option value="January">Jan</option>
 <option value="February">Feb</option>
@@ -109,11 +100,11 @@ enctype="multipart/form-data">
 <option value="December">Dec</option>
 </select>
  
-<select name="Att_Year" id="Att_Year">
+<select name="Item_Year" id="Item_Year">
  
 <option value="-1">Year</option>
-<option value="2016">2016</option>
-<option value="2015">2015</option>
+<option value="2011">2016</option>
+<option value="2011">2015</option>
 <option value="2012">2014</option>
 
 </select>
@@ -124,17 +115,17 @@ enctype="multipart/form-data">
 <tr>
 <td>Contact Information *</td>
 <td>
-    <input type="text" name="Att_Contact" placeholder="Contact No." required/>
+    <input type="text" name="Item_Contact" maxlength="10000" placeholder="Contact No." required/>
   
 </td>
 </tr>
  
 <!----- Online Booking ---------------------------------------------------------->
 <tr>
-<td>Online Booking *</td>
+<td>Online Booking</td>
 <td>
   <p>
-    <input type="text" name="Att_Booking" placeholder="Website URL" required/>
+    <input type="text" name="Item_Booking" maxlength="10000" placeholder="Website URL" />
 </td>
 </tr>
  
