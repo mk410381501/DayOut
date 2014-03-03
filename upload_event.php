@@ -3,6 +3,7 @@
 include "config.php";
 
 $event_name = mysql_real_escape_string($_POST['Event_Name']);
+$event_venue = mysql_real_escape_string($_POST['Event_venue']);
 $event_info = mysql_real_escape_string($_POST['Event_info']);
 $event_price = $_POST['Event_price'];
 $event_day = $_POST['Event_day'];
@@ -51,7 +52,7 @@ if ((($image_type == "image/gif")
     else
       {
 		  
-mysql_query("INSERT INTO Events (event_name, event_info, event_price, event_day, event_month, event_year, event_online, event_contact, image_name, image, user_id) VALUES ('$event_name', '$event_info', '$event_price', '$event_day', '$event_month', '$event_year', '$event_online', '$event_contact', '$image_name', '$image',".$_SESSION['id'].")");
+mysql_query("INSERT INTO Events (event_name, event_venue, event_info, event_price, event_day, event_month, event_year, event_online, event_contact, image_name, image, user_id) VALUES ('$event_name', '$event_venue', '$event_info', '$event_price', '$event_day', '$event_month', '$event_year', '$event_online', '$event_contact', '$image_name', '$image',".$_SESSION['id'].")");
 		  
       move_uploaded_file($_FILES["file"]["tmp_name"],
       "upload/" . $image_name);

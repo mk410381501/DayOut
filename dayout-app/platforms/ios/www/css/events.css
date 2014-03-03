@@ -1,0 +1,177 @@
+/* EVENTS INDEX, DEALS INDEX, ATTRACTIONS INDEX */
+
+#imageContainer {
+       width: 100%;
+       height:200px;
+       background-image: url(http://upload.wikimedia.org/wikipedia/commons/1/1a/Bachalpseeflowers.jpg);
+
+background-size: cover;
+-webkit-box-shadow: inset 0px -166px 14px -115px rgba(0,0,0,0.6);
+-moz-box-shadow: inset 0px -166px 14px -115px rgba(0,0,0,0.6);
+box-shadow: inset 0px -166px 14px -115px rgba(0,0,0,0.6);
+border:1px solid #dddddd;
+border-top-right-radius:1em;
+border-top-left-radius:1em;
+border-bottom-right-radius:1em;
+border-bottom-left-radius:1em;
+overflow: hidden;
+
+ }
+ 
+ .content-bottom {
+    font-family:'Source Sans Pro', sans-serif;
+    position: absolute;
+    text-align: left;
+    margin-left: 5px;
+    width: 95%;
+    overflow: hidden;
+    bottom: 0; /*This is the part that glues it to the bottom*/
+}
+
+itemname {
+    font-size: 14px;
+    color: #fff;
+    padding-left: 5px;
+    padding-bottom: 1px;
+    font-weight:bold;
+}
+
+sub {
+    font-size: 10px;
+    color: #e5e5e5;
+    font-weight:bold;
+    text-transform:uppercase;
+    padding-left: 5px;
+
+}
+
+price {
+    font-size: 14px;
+    color: #00a2e2;
+    font-weight:bold;
+    text-transform:uppercase;
+    float:right;
+    padding-bottom: 10px;
+    }
+ 
+ a:link {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:visited {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* EVENT DETAIL */
+
+.containThis{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+
+}
+
+#titleContainer{
+    font-family:'Source Sans Pro', sans-serif;
+    margin-top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    text-align:center;
+
+}
+
+itemnameDetail {
+    font-size: 15px;
+    font-weight:400;
+	line-height:1.1;
+    color: #000;
+}
+
+subDetail {
+    font-size: 10px;
+    text-transform:uppercase;
+	line-height:1.4;
+	color:#656565;
+	font-weight:bold;
+
+}
+
+#priceContainer{
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+priceee{
+    font-size: 14px;
+
+    color: #00a2e2;
+    font-weight:bold;
+    text-transform:uppercase;
+
+}
+
+#break{
+    margin-bottom:15px;
+
+}
+
+#desContainer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width:100%;
+    height: 100%;
+    background-color: #fff;
+
+}
+
+.desContainer-shadow:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0px 0px 8px 1px #000000;
+       -moz-box-shadow: 0px 0px 8px 1px #000000;
+            box-shadow: 0px 0px 8px 1px #000000;
+}
+
+desTitle {
+    font-size: 15px;
+    font-weight:400;
+	line-height:1.1;
+    color: #000;
+}
+
+#desBorder{
+    margin-top: 6px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+describ {
+	line-height:1.4;
+	color:#656565;
+    font-size: 14px;
+    font-weight:300;
+    padding-right:5px;
+}
+
+.actionButtons {
+    left:0;
+    right:0;
+    height:40px;
+}
+
+ 

@@ -7,12 +7,15 @@ table{
 		font-size: 13px; 
 		font-style: normal;
 		background-color: #2892c6; 
+		
+		/**
 		border-radius: 15px;
 		-moz-border-radius: 15px;
     	-webkit-border-radius: 15px;
     	-khtml-border-radius: 15px;
+		**/
 		
-			padding-bottom: 15px;
+	padding-bottom: 15px;
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 15px;
@@ -110,3 +113,7 @@ table textarea {
 	background: #7FFF00;
 	font-weight: bold;
 } */
+
+form{
+	background:url(images/attractions.png);
+}

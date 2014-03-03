@@ -22,48 +22,82 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
       abstract: true,
       templateUrl: "templates/tabs.html"
     })
+        
+        // HOME PAGE
+        .state('tab.home', {
+               url: '/home',
+               views: {
+               'home-tab': {
+               templateUrl: 'templates/home.html'
+               }
+               }
+               })
 
-    // the pet tab has its own child nav-view and history
-    .state('tab.pet-index', {
-      url: '/pets',
+    // EVENT PAGE
+    .state('tab.event-index', {
+      url: '/events',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-index.html',
-          controller: 'PetIndexCtrl'
+        'events-tab': {
+          templateUrl: 'templates/event-index.html',
+          controller: 'EventIndexCtrl'
         }
       }
     })
 
-    .state('tab.pet-detail', {
-      url: '/pet/:petId',
+    .state('tab.event-detail', {
+      url: '/event/:eventId',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-detail.html',
-          controller: 'PetDetailCtrl'
+        'events-tab': {
+          templateUrl: 'templates/event-detail.html',
+          controller: 'EventDetailCtrl'
         }
       }
     })
 
-    .state('tab.adopt', {
-      url: '/adopt',
-      views: {
-        'adopt-tab': {
-          templateUrl: 'templates/adopt.html'
-        }
-      }
-    })
-
-    .state('tab.about', {
-      url: '/about',
-      views: {
-        'about-tab': {
-          templateUrl: 'templates/about.html'
-        }
-      }
-    });
+        // DEALS PAGE
+        .state('tab.deal-index', {
+               url: '/deals',
+               views: {
+               'deals-tab': {
+               templateUrl: 'templates/deal-index.html',
+               controller: 'DealIndexCtrl'
+               }
+               }
+               })
+        
+        .state('tab.deal-detail', {
+               url: '/deal/:dealId',
+               views: {
+               'deals-tab': {
+               templateUrl: 'templates/deal-detail.html',
+               controller: 'DealDetailCtrl'
+               }
+               }
+               })
+        
+        // ATTRACTIONS PAGE
+        .state('tab.attraction-index', {
+               url: '/attractions',
+               views: {
+               'attractions-tab': {
+               templateUrl: 'templates/attraction-index.html',
+               controller: 'AttractionIndexCtrl'
+               }
+               }
+               })
+        
+        .state('tab.attraction-detail', {
+               url: '/attraction/:attractionId',
+               views: {
+               'attractions-tab': {
+               templateUrl: 'templates/attraction-detail.html',
+               controller: 'AttractionDetailCtrl'
+               }
+               }
+               });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/pets');
+  $urlRouterProvider.otherwise('/tab/home');
 
 });
 

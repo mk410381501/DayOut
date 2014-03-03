@@ -2173,7 +2173,8 @@ infinite-scroll.active .scroll-infinite {
     height: 100%; }
 
 .has-header {
-  top: 64px; }
+  top: 64px;
+}
 
 .has-subheader {
   top: 88px; }
@@ -2200,7 +2201,7 @@ infinite-scroll.active .scroll-infinite {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #dddddd;
+  background-color: #F0F0F0;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
@@ -3493,7 +3494,8 @@ a.item-icon-right:after, button.item-icon-right:after, a.item-button-right:after
   text-align: right; }
   .item-image img:first-child, .item-image .list-img {
     max-height: 150px;
-    border-top-right-radius:2em;
+
+overflow:hidden;
     width: 100%;
     vertical-align: middle; }
 
@@ -3636,7 +3638,8 @@ a.item-icon-right:after, button.item-icon-right:after, a.item-button-right:after
   padding-top: 1px;
   padding-bottom: 1px;
   padding-left: 0;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  overflow:hidden; }
 
 /* If a list is the last item in a container, don't add margin-bottom */
 .list:last-child {
@@ -3664,7 +3667,7 @@ a.item-icon-right:after, button.item-icon-right:after, a.item-button-right:after
   margin-top: 20px;
   padding: 5px 15px;
   background-color: transparent;
-  color: #222;
+  color: #fff;
   font-weight: bold; }
 
 .card.list .list-item {
@@ -3679,39 +3682,8 @@ a.item-icon-right:after, button.item-icon-right:after, a.item-button-right:after
 .card, .list-inset {
   overflow: hidden;
   margin: 20px 10px;
-  border-radius: 2px;
-  background-color: #fff; }
+  background-color: #F0F0F0; }
 
-.card {
-  padding-top: 1px;
-  padding-bottom: 1px;
-   }
-
-.card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px; }
-  .card .item:first-child .item-content, .list-inset .item:first-child .item-content, .padding > .list .item:first-child .item-content {
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px; }
-.card .item:last-child, .list-inset .item:last-child, .padding > .list .item:last-child {
-  border-bottom-right-radius: 2px;
-  border-bottom-left-radius: 2px; }
-  .card .item:last-child .item-content, .list-inset .item:last-child .item-content, .padding > .list .item:last-child .item-content {
-    border-bottom-right-radius: 2px;
-    border-bottom-left-radius: 2px; }
-
-.card .item:last-child, .list-inset .item:last-child {
-  margin-bottom: -1px; }
-
-.card .item, .list-inset .item, .padding > .list .item, .padding-horizontal > .list .item {
-  margin-right: 0;
-  margin-left: 0; }
-
-.padding-left > .list .item {
-  margin-left: 0; }
-
-.padding-right > .list .item {
-  margin-right: 0; }
 
 /**
  * Badges

@@ -13,7 +13,7 @@ enctype="multipart/form-data">
 <!----- First Name ---------------------------------------------------------->
 <tr>
 <td>Event Name *</td>
-<td><input type="text" name="Event_Name" maxlength="30" placeholder="Name" required/>
+<td><input type="text" name="Event_Name" placeholder="Name" required/>
 </td>
 </tr>
 
@@ -24,8 +24,16 @@ enctype="multipart/form-data">
 </td>
 </tr>
 
+<!----- Venue ---------------------------------------------------------->
+<tr>
+<td>Venue *</td>
+<td><input type="text" name="Event_venue" placeholder="Venue Name" required/>
 
-<!----- Address ---------------------------------------------------------->
+</td>
+</tr>
+
+
+<!----- Information ---------------------------------------------------------->
 <tr>
 <td>Event Information *<br /><br /><br /></td>
 <td><textarea name="Event_info" rows="6" cols="50" placeholder="Enter details about this event." required></textarea></td>

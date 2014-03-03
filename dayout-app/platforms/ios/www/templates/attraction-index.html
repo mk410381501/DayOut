@@ -1,0 +1,25 @@
+<!--
+  This template loads for the 'tab.about' state (app.js)
+-->
+<view title="'Attractions'">
+    <content has-header="true" has-tabs="true">
+        
+        <list>
+            <div ng-repeat="attraction in attractions" class="list card">
+                
+                <a href="#/tab/attraction/{{attraction.id}}">
+                    <div id="imageContainer">
+                        <div class="content-bottom">
+                            
+                            <itemname>{{attraction.attraction_name}}</itemname><br>
+                            <sub>{{attraction.bname}}</sub>
+                            <price>{{attraction.attraction_price}}</price>
+                        </div>
+                    </div>
+                </a>
+                
+            </div>
+        </list>
+        
+    </content>
+</view>

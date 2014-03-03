@@ -1,0 +1,70 @@
+<!--
+  This template loads for the 'tab.adopt' state (app.js)
+-->
+<view title="'{{event.bname}}'">
+    <content has-header="true" has-tabs="true">
+        
+        
+        <div id="titleContainer">
+            <!-- IMAGE WILL BE REPLACED WITH ITEM IMAGE (IN MYSQL SERVER) -->
+            <img src="http://socialwork-socialpolicy.tcd.ie/assets/img/westfront2.jpg" height="200px" width="100%">
+                
+                <itemnameDetail>{{attraction.attraction_name}}</itemnameDetail><br>
+                <subDetail>{{attraction.bname}}</subDetail><br>
+                <div id="priceContainer">
+                    <priceee>{{attraction.attraction_price}}</priceee>
+                </div>
+                </div>
+        
+        <div id="desContainer" class="desContainer-shadow">
+            <desTitle>Deal Expires</desTitle><br>
+            <div id="desBorder"></div>
+            <describ>{{attraction.attraction_day}} / {{attraction.attraction_month}} / {{attraction.attraction_year}}</describ>
+            
+        </div>
+        
+        <div id="break"></div>
+        
+        <div id="desContainer" class="desContainer-shadow">
+            <desTitle>Address</desTitle><br>
+            <div id="desBorder"></div>
+            <describ>{{attraction.attraction_address1}},<br>
+                {{attraction.attraction_address2}},<br>
+                {{attraction.attraction_address3}},<br>
+                {{attraction.attraction_address4}}.</describ>
+        </div>
+
+        <div id="break"></div>
+        
+        <div id="desContainer" class="desContainer-shadow">
+            <desTitle>About This Attraction</desTitle><br>
+            <div id="desBorder"></div>
+            <describ>{{attraction.attraction_info}}</describ>
+            
+        </div>
+        
+        <div id="break"></div>
+        
+        <div id="desContainer" class="desContainer-shadow">
+            <div class="item item-button-right">
+                Contact Number
+                <button class="button button-outline button-positive">
+                    <!-- MY NUMBER WILL BE REPLACED WITH EVENT NUMBER (IN MYSQL SERVER) -->
+                    <a href="tel:0876293056"><i class="icon ion-ios7-telephone"></i></a>
+                </button>
+            </div>
+        </div>
+        
+        <div id="break"></div>
+        
+        <div id="desContainer" class="desContainer-shadow">
+            <!-- WILL BE REPLACED WITH EVENT PAYMENT BOOKING SITE (IN MYSQL SERVER) -->
+            <a href="https://www.facebook.com/murrayk4">
+                <button class="button button-block button-balanced">
+                    Book Online
+                </button></a>
+        </div>
+        
+        
+    </content>
+</view>
