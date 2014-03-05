@@ -2,9 +2,9 @@
 
 include('config.php');
 
-$email = $_POST['email'];
-$password = ($_POST['password']);
-$submit = ($_POST['submit']);
+$email = mysql_real_escape_string($_POST['email']);
+$password = mysql_real_escape_string($_POST['password']);
+$submit = mysql_real_escape_string($_POST['submit']);
 
 	$query = mysql_query("SELECT * FROM `User` WHERE email = '$email' AND password = md5('$password')");
 	$data = mysql_fetch_array($query);

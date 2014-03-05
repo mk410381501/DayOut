@@ -8,7 +8,7 @@
             <div ng-repeat="attraction in attractions" class="list card">
                 
                 <a href="#/tab/attraction/{{attraction.id}}">
-                    <div id="imageContainer">
+                    <div id="imageContainer" style="background-image: url('/upload/{{attraction.image_name}}')">
                         <div class="content-bottom">
                             
                             <itemname>{{attraction.attraction_name}}</itemname><br>

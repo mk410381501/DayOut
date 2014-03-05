@@ -2,11 +2,11 @@
 include ('config.php');
 
 session_start();
-$industry = $_POST['industry'];
-$reason = $_POST['reason'];
+$industry = mysql_real_escape_string($_POST['industry']);
+$reason = mysql_real_escape_string($_POST['reason']);
 
 $business_name = mysql_real_escape_string($_POST['b_name']);
-$number = $_POST['number'];
+$number = mysql_real_escape_string($_POST['number']);
 $address1 = mysql_real_escape_string($_POST['address1']);
 $address2 = mysql_real_escape_string($_POST['address2']);
 $address3 = mysql_real_escape_string($_POST['address3']);

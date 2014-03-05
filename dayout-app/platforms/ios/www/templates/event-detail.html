@@ -4,13 +4,13 @@
   The PetCtrl pulls data from the Pets service (service.js)
   The Pets service returns an array of pet data
 -->
-<view title="'{{event.bname}}'">
+<view title="event.bname">
   <content has-header="true" has-tabs="true">
     
     
     <div id="titleContainer">
         <!-- IMAGE WILL BE REPLACED WITH ITEM IMAGE (IN MYSQL SERVER) -->
-        <img src="http://upload.wikimedia.org/wikipedia/commons/1/1a/Bachalpseeflowers.jpg" height="200px" width="100%">
+        <img src="/upload/{{event.image_name}}" height="200px" width="100%">
             
             <itemnameDetail>{{event.event_name}}</itemnameDetail><br>
             <subDetail>{{event.bname}}</subDetail><br>
@@ -51,7 +51,7 @@
         Contact Number
         <button class="button button-outline button-positive">
             <!-- MY NUMBER WILL BE REPLACED WITH EVENT NUMBER (IN MYSQL SERVER) -->
-            <a href="tel:0876293056"><i class="icon ion-ios7-telephone"></i></a>
+            <a href="tel:{{event.event_contact}}"><i class="icon ion-ios7-telephone"></i></a>
         </button>
     </div>
     </div>
@@ -60,7 +60,7 @@
    
     <div id="desContainer" class="desContainer-shadow">
     <!-- WILL BE REPLACED WITH EVENT PAYMENT BOOKING SITE (IN MYSQL SERVER) -->
-    <a href="http://www.w3schools.com">
+    <a href="{{event.event_online}}">
     <button class="button button-block button-balanced">
         Book Online
     </button></a>

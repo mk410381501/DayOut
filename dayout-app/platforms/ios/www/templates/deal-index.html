@@ -8,7 +8,7 @@
             <div ng-repeat="deal in deals" class="list card">
                 
                 <a href="#/tab/deal/{{deal.id}}">
-                    <div id="imageContainer">
+                    <div id="imageContainer" style="background-image: url('/upload/{{deal.image_name}}')">
                         <div class="content-bottom">
                             
                             <itemname>{{deal.item_name}}</itemname><br>

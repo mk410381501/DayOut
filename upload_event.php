@@ -5,20 +5,20 @@ include "config.php";
 $event_name = mysql_real_escape_string($_POST['Event_Name']);
 $event_venue = mysql_real_escape_string($_POST['Event_venue']);
 $event_info = mysql_real_escape_string($_POST['Event_info']);
-$event_price = $_POST['Event_price'];
-$event_day = $_POST['Event_day'];
-$event_month = $_POST['Event_Month'];
-$event_year = $_POST['Event_Year'];
+$event_price = mysql_real_escape_string($_POST['Event_price']);
+$event_day = mysql_real_escape_string($_POST['Event_day']);
+$event_month = mysql_real_escape_string($_POST['Event_Month']);
+$event_year = mysql_real_escape_string($_POST['Event_Year']);
 $event_online = mysql_real_escape_string($_POST['Event_booking']);
-$event_contact = $_POST['Event_contact'];
+$event_contact = mysql_real_escape_string($_POST['Event_contact']);
 
-/* This script has some restrictions to the file upload. The user may upload .gif, .jpeg, and .png files; and the file size must be under 80 kB: */
+/* This script has some restrictions to the file upload. The user may upload .gif, .jpeg, and .png files; and the file size must be under 200 kB: */
 
 $image = file_get_contents($_FILES['image']['tmp_name']);
 
-$image_name = $_FILES["file"]["name"];
-$image_type = $_FILES["file"]["type"];
-$image_size = $_FILES["file"]["size"];
+$image_name = mysql_real_escape_string($_FILES["file"]["name"]);
+$image_type = mysql_real_escape_string($_FILES["file"]["type"]);
+$image_size = mysql_real_escape_string($_FILES["file"]["size"]);
 
 $allowedExts = array("gif", "jpeg", "jpg", "png");
 $temp = explode(".", $image_name);
@@ -29,7 +29,7 @@ if ((($image_type == "image/gif")
 || ($image_type == "image/pjpeg")
 || ($image_type == "image/x-png")
 || ($image_type == "image/png"))
-&& ($image_size < 82000)
+&& ($image_size < 205000)
 && in_array($extension, $allowedExts))
   {
   if ($_FILES["file"]["error"] > 0)
@@ -58,6 +58,11 @@ mysql_query("INSERT INTO Events (event_name, event_venue, event_info, event_pric
       "upload/" . $image_name);
       echo "Stored in: " . "upload/" . $image_name;
       echo "SUCCESSFULLY ADDED EVENT";
+      
+      $path = "/upload/$image_name";
+      echo "<img src='".$path."' />";
+      
+
     }
     }
   }

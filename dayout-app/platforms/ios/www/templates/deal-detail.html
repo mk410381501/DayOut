@@ -1,13 +1,13 @@
 <!--
   This template loads for the 'tab.adopt' state (app.js)
 -->
-<view title="'{{event.bname}}'">
+<view title="deal.bname">
     <content has-header="true" has-tabs="true">
         
         
         <div id="titleContainer">
             <!-- IMAGE WILL BE REPLACED WITH ITEM IMAGE (IN MYSQL SERVER) -->
-            <img src="http://www.gettyimages.ie/CMS/Pages/ImageCollection/StaticContent/image1_%20164248809.jpg" height="200px" width="100%">
+            <img src="/upload/{{deal.image_name}}" height="200px" width="100%">
                 
                 <itemnameDetail>{{deal.item_name}}</itemnameDetail><br>
                 <subDetail>{{deal.bname}}</subDetail><br>
@@ -39,7 +39,7 @@
                 Contact Number
                 <button class="button button-outline button-positive">
                     <!-- MY NUMBER WILL BE REPLACED WITH EVENT NUMBER (IN MYSQL SERVER) -->
-                    <a href="tel:0876293056"><i class="icon ion-ios7-telephone"></i></a>
+                    <a href="tel:{{deal.item_contact}}"><i class="icon ion-ios7-telephone"></i></a>
                 </button>
             </div>
         </div>
@@ -48,7 +48,7 @@
         
         <div id="desContainer" class="desContainer-shadow">
             <!-- WILL BE REPLACED WITH EVENT PAYMENT BOOKING SITE (IN MYSQL SERVER) -->
-            <a href="http://www.w3schools.com">
+            <a href="{{deal.item_booking}}">
                 <button class="button button-block button-balanced">
                     Book Online
                 </button></a>

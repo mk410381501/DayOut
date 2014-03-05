@@ -3,22 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="author" content="Dmitri Voronianski">
-	<title>jQuery plugin for Avgrund concept popin</title>
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,400italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="css/sign_in.css" />
 
 	<link rel="stylesheet" href="css/avgrund.css">
 
-	<!--[if lt IE 9]>
-		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
 </head>
 <body>
-		<div class="buttons">
-			<a href="" id="show" class="button left">Show it.</a>
-				
-	</div>
-    
+		
    
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>

@@ -45,7 +45,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     })
 
     .state('tab.event-detail', {
-      url: '/event/:eventId',
+      url: '/event/:id',
       views: {
         'events-tab': {
           templateUrl: 'templates/event-detail.html',
@@ -66,7 +66,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
                })
         
         .state('tab.deal-detail', {
-               url: '/deal/:dealId',
+               url: '/deal/:id',
                views: {
                'deals-tab': {
                templateUrl: 'templates/deal-detail.html',
@@ -87,7 +87,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
                })
         
         .state('tab.attraction-detail', {
-               url: '/attraction/:attractionId',
+               url: '/attraction/:id',
                views: {
                'attractions-tab': {
                templateUrl: 'templates/attraction-detail.html',

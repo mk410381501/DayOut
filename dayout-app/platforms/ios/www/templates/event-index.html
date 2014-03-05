@@ -10,7 +10,7 @@
       <div ng-repeat="event in events" class="list card">
           
           <a href="#/tab/event/{{event.id}}">
-          <div id="imageContainer">
+          <div id="imageContainer" style="background-image: url('/upload/{{event.image_name}}')">
                <div class="content-bottom">
           
                       <itemname>{{event.event_name}}</itemname><br>

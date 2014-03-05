@@ -18,7 +18,7 @@ $attraction_contact = $_POST['Att_Contact'];
 $attraction_booking = mysql_real_escape_string($_POST['Att_Booking']);
 
 /* This script has some restrictions to the file upload. 
-The user may upload .gif, .jpeg, and .png files; and the file size must be under 80 kB: */
+The user may upload .gif, .jpeg, and .png files; and the file size must be under 200 kB: */
 
 $image = file_get_contents($_FILES['image']['tmp_name']);
 
@@ -35,7 +35,7 @@ if ((($image_type == "image/gif")
 || ($image_type == "image/pjpeg")
 || ($image_type == "image/x-png")
 || ($image_type == "image/png"))
-&& ($image_size < 82000)
+&& ($image_size < 205000)
 && in_array($extension, $allowedExts))
   {
   if ($_FILES["file"]["error"] > 0)
