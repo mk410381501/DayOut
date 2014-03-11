@@ -1,46 +1,48 @@
 angular.module('starter.controllers', [])
 
-// LOADER - To trigger Loading in your code, use the $ionicLoading service in your angular controllers or directives:
-.controller('LoadingCtrl', ['$scope', '$ionicLoading', function($scope, $ionicLoading) {
-                            
-                        // Trigger the loading indicator
-                        $scope.show = function() {
-                            
-                            // Show the loading overlay and text
-                            $scope.loading = $ionicLoading.show({
-                                                                
-                            // The text to display in the loading indicator
-                            content: 'Loading',
-                                                                
-                            // The animation to use
-                            animation: 'fade-in',
-                                                                
-                            // Will a dark overlay or backdrop cover the entire view
-                            showBackdrop: true,
-                                                                
-                            // The maximum width of the loading indicator
-                            // Text will be wrapped if longer than maxWidth
-                            maxWidth: 200,
-                                                                
-                            // The delay in showing the indicator
-                            showDelay: 500
-                            });
-                        };
-                            
-                        // Hide the loading indicator
-                        $scope.hide = function(){
-                            $scope.loading.hide();
-                        };
-}])
-
+// EVENTS SUMMARY
+// A simple controller that fetches a list of data from a service
+.controller('BudgetIndexCtrl', function($scope, $timeout, $ionicLoading, BudgetService) {
+            
+            var loading = $ionicLoading.show({
+                                             content: 'Loading...',
+                                             showBackdrop: true,
+                                             maxWidth: 200,
+                                             showDelay: 500
+                                             });
+            
+            //            $timeout(function() {
+            //                     loading.hide();
+            //                     }, 3000);
+            
+            // "Pets" is a service returning mock data (services.js)
+            $scope.offers = BudgetService.all();
+            
+            loading.hide();
+            })
 
 
 // EVENTS SUMMARY
 // A simple controller that fetches a list of data from a service
-.controller('EventIndexCtrl', function($scope, EventService) {
+.controller('EventIndexCtrl', function($scope, $timeout, $ionicLoading, EventService) {
+            
+            var loading = $ionicLoading.show({
+                content: 'Loading...',
+                showBackdrop: true,
+                maxWidth: 200,
+                showDelay: 500
+            });
+            
+//            $timeout(function() {
+//                     loading.hide();
+//                     }, 3000);
+            
   // "Pets" is a service returning mock data (services.js)
   $scope.events = EventService.all();
+            
+            loading.hide();
 })
+
 
 // EVENT DETAILS
 // A simple controller that shows a tapped item's data
@@ -53,11 +55,22 @@ angular.module('starter.controllers', [])
 
 // DEALS SUMMARY
 // A simple controller that fetches a list of data from a service
-.controller('DealIndexCtrl', function($scope, DealService) {
-            // "Pets" is a service returning mock data (services.js)
-            $scope.deals = DealService.all();
+.controller('DealIndexCtrl', function($scope, $ionicLoading, DealService) {
+            
+            var loading = $ionicLoading.show({
+                content: 'Loading...',
+                showBackdrop: true,
+                maxWidth: 200,
+                showDelay: 500
+            });
+            
+            
+        // "Pets" is a service returning mock data (services.js)
+        $scope.deals = DealService.all();
+            
+            loading.hide();
 
-            })
+})
 
 
 // DEAL DETAILS
@@ -72,10 +85,21 @@ angular.module('starter.controllers', [])
 
 // ATTRACTIONS SUMMARY
 // A simple controller that fetches a list of data from a service
-.controller('AttractionIndexCtrl', function($scope, AttractionService) {
-            // "Pets" is a service returning mock data (services.js)
-            $scope.attractions = AttractionService.all();
-            })
+.controller('AttractionIndexCtrl', function($scope, $ionicLoading, AttractionService) {
+
+            var loading = $ionicLoading.show({
+                content: 'Loading...',
+                showBackdrop: true,
+                maxWidth: 200,
+                showDelay: 500
+            });
+            
+            
+        // "Pets" is a service returning mock data (services.js)
+        $scope.attractions = AttractionService.all();
+            
+            loading.hide();
+})
 
 // ATTRACTION DETAILS
 // A simple controller that shows a tapped item's data

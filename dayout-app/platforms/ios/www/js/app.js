@@ -32,6 +32,16 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
                }
                }
                })
+        
+        .state('tab.home-budget', {
+               url: '/home/budget',
+               views: {
+               'home-tab': {
+               templateUrl: 'templates/home-budget.html',
+               controller: 'BudgetIndexCtrl'               
+               }
+               }
+               })
 
     // EVENT PAGE
     .state('tab.event-index', {

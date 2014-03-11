@@ -3850,6 +3850,7 @@ label, input, button, select, textarea {
 input, button, select, textarea {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
+/** USING **/
 .item-input {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3864,7 +3865,13 @@ input, button, select, textarea {
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 6px 8px 5px; }
+  padding: 6px 8px 5px;
+  margin-left: 8%;
+  margin-right: 8%;
+    }
+  
+  
+
   .item-input input {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -3974,10 +3981,12 @@ input, button, select, textarea {
 .placeholder-icon {
   color: #aaa; }
 
+/** USING **/
 .item-stacked-label {
   display: block;
-  background-color: transparent;
-  box-shadow: none; }
+  box-shadow: none; 
+  
+  }
   .item-stacked-label .input-label, .item-stacked-label .icon {
     display: inline-block;
     padding: 4px 0;
@@ -4101,9 +4110,12 @@ input[type="radio"][disabled], input[type="checkbox"][disabled], input[type="rad
 .checkbox input:checked:after {
   opacity: 1; }
 
+/** USING **/
 /* make sure item content have enough padding on left to fit the checkbox */
 .item-checkbox {
-  padding-left: 58px; }
+  padding-left: 58px;
+  margin-right:8%;
+  margin-left:8%; }
   .item-checkbox.active, .item-checkbox:active {
     box-shadow: none; }
 
@@ -4760,7 +4772,9 @@ input[type="range"] {
   border-radius: 0; }
 
 button.button-block, button.button-full, .button-full > button.button, input.button.button-block {
-  width: 100%; }
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%; }
 
 a.button {
   text-decoration: none; }

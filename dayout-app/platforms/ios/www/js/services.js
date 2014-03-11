@@ -3,6 +3,32 @@ var backendURL = "http://localhost/dayout-app/php/";
 angular.module('starter.services', [])
 
 /**
+ * BUDGET PROFILE
+ */
+.factory('BudgetService', function() {
+         // Might use a resource here that returns a JSON array
+         
+         // Some fake testing data
+         var offers;
+         
+         jQuery.ajax( backendURL + "budgetprocess.php", {
+                     async: false,
+                     cache: false,
+                     error: function() { console.log("oh no"); },
+                     success: function(oData) {
+                     offers = oData;
+                     }
+                     });
+         
+         
+         return {
+         all: function() {
+         return offers;
+         }
+         }
+         })
+
+/**
  * EVENTS SUMMARY
  */
 .factory('EventService', function() {
