@@ -2,7 +2,7 @@
   This template loads for the 'tab.adopt' state (app.js)
 -->
 <view title="'Budget Profile'">
-    <content has-header="true" has-tabs="true">
+    <content has-header="true" has-tabs="true" ng-controller="HomeScreenController">
         
         
         
@@ -15,7 +15,7 @@
         
         <div id="break"></div>
         <!-- #/tab/home/budget -->
-<form action="http://localhost/dayout-app/php/budgetprocess.php" method="post">
+        <form method="post">
         
         <div id="desContainer" class="desContainer-shadow">
             <desTitle>What Are You Looking For?</desTitle><br>
@@ -25,21 +25,21 @@
     
                 <li class="item item-checkbox">
                     <label class="checkbox">
-                        <input type="checkbox" name="deals">
+                        <input type="checkbox" name="deals" ng-model="filter.deals" >
                     </label>
                     Deals
                 </li>
     
                 <li class="item item-checkbox">
                     <label class="checkbox">
-                        <input type="checkbox" name="events">
+                        <input type="checkbox" name="events" ng-model="filter.events" >
                     </label>
                     Events
                 </li>
     
                 <li class="item item-checkbox">
                     <label class="checkbox">
-                        <input type="checkbox" name="attractions">
+                        <input type="checkbox" name="attractions" ng-model="filter.attractions" >
                     </label>
                     Attractions
                 </li>
@@ -50,11 +50,11 @@
             <div id="desBorder"></div>
         
         <label class="item item-input">
-            <input type="number" name="budget" placeholder="€">
+            <input type="number" name="budget" placeholder="€" ng-model="filter.budget">
         </label>
        
         <div id="break"></div>
-            <button class="button button-block button-positive">
+            <button class="button button-block button-positive" ng-click="navigate()">
                 Submit
             </button>
             

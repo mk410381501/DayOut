@@ -1,9 +1,19 @@
 angular.module('starter.controllers', [])
 
-// EVENTS SUMMARY
+// BUDGET PROFILE
 // A simple controller that fetches a list of data from a service
-.controller('BudgetIndexCtrl', function($scope, $timeout, $ionicLoading, BudgetService) {
+.controller('HomeScreenController', function($scope, $timeout, $ionicLoading, $location) {
             
+            // "Pets" is a service returning mock data (services.js)
+            $scope.filter = {events: false, deals: false, attractions: false, budget: 0};
+            $scope.navigate = function(){ $location.path( "/tab/home/budget/" + $scope.filter.deals + "/" + $scope.filter.events + "/" + $scope.filter.attractions + "/" + $scope.filter.budget );};
+
+})
+
+// BUDGET PROFILE
+// A simple controller that fetches a list of data from a service
+.controller('BudgetIndexCtrl', function($scope, $location, $stateParams, $ionicLoading, BudgetService) {
+            console.log($stateParams);
             var loading = $ionicLoading.show({
                                              content: 'Loading...',
                                              showBackdrop: true,
@@ -16,10 +26,33 @@ angular.module('starter.controllers', [])
             //                     }, 3000);
             
             // "Pets" is a service returning mock data (services.js)
-            $scope.offers = BudgetService.all();
-            
+            $scope.offers = BudgetService.get($stateParams);
+            console.log($scope.offers);
             loading.hide();
+            
+            // this function is done to look for the TYPE of offer and
+            $scope.navigate = function(arg) {
+            
+            if (arg.item_type == "DEAL") {
+                $location.path("/tab/deal/" + arg.id);
+            $scope.$apply();
+            }
+            
+            if (arg.item_type == "EVENT") {
+                $location.path("/tab/event/" + arg.id);
+            $scope.$apply();
+            }
+            
+            if (arg.item_type == "ATTRACTION") {
+                $location.path("/tab/attraction/" + arg.id);
+                $scope.$apply();
+            }
+            
+//            console.log(arg);
+            };
+            
             })
+
 
 
 // EVENTS SUMMARY

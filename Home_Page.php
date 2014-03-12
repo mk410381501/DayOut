@@ -27,7 +27,7 @@
 		<div class="container clearfix">
 
 			<div id="logo" class="grid_3">
-				<a href="Home_Page.php"><img src="images/logoheadercopy.png"></a>
+				<a href="Home_Page.php"><img src="images/logo.png"></a>
 			</div>
 
 			<div id="nav" class="grid_9 omega">

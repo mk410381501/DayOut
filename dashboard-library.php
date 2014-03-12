@@ -37,7 +37,7 @@ include "Config.php";
 <div class="menu">
 		<div class="container clearfix">
 			<div id="logo" class="grid_3">
-				<a href="dashboard.php"><img src="images/logoheadercopy.png"></a>
+				<a href="dashboard.php"><img src="images/logo.png"></a>
 			</div>
 		  <div id="nav" class="grid_9 omega">
 				<ul class="navigation">

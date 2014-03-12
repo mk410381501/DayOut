@@ -25,7 +25,7 @@
 			onBlurContainer: '.containerrr',
 			template: '<section id="conntent">' +
 			'<form form name="login" action="loginprocess.php" method="post"  accept-charset="utf-8">' +
-			'<a href="Home_Page.php"><img src="images/logoheadercopy.png"></a>' +
+			'<a href="Home_Page.php"><img src="images/logo.png"></a>' +
 			'<h1></h1>' + '<div>' + '<input type="text" name="email" placeholder="example@dayout.com" required id="username" />' + '</div>' + '<div>' + '<input type="password" name="password" placeholder="Password" required id="password" />' + '</div>' + '<div>' + '<input type="submit" id="submit" name="submit" value="Log In">' + '</div>' + '</form>' + '</section>'
 					
 		});

@@ -28,13 +28,14 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
                url: '/home',
                views: {
                'home-tab': {
-               templateUrl: 'templates/home.html'
+               templateUrl: 'templates/home.html',
+               controller: 'HomeScreenController'  
                }
                }
                })
         
         .state('tab.home-budget', {
-               url: '/home/budget',
+               url: '/home/budget/:deals/:events/:attractions/:budget',
                views: {
                'home-tab': {
                templateUrl: 'templates/home-budget.html',

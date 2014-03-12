@@ -4,13 +4,21 @@
 <view title="'Budget Profile'">
     <content has-header="true" has-tabs="true">
     
-        <div id="desContainer" class="desContainer-shadow">
-            <div id="titleContainer">
-            <welcomeTitle>Discover more with DayOut</welcomeTitle></br>
-            <discover>See the latest Deals, Events or Attractions within your budget.</discover>
-            </div>
+    <list>
+        <div ng-repeat="offer in offers" class="list card">
+            <a ng-click="navigate({{offer}})">
+                <div id="imageContainer" style="background-image: url('http://localhost/upload/{{offer.image_name}}')">
+                    <div class="content-bottom">
+                        
+                        <itemname>{{offer.item_name}}</itemname><br>
+                        <sub>{{offer.bname}}</sub>
+                        <price>{{offer.item_price}}</price>
+                    </div>
+                </div>
+            </a>
+            
         </div>
-        
+    </list>
         
     </content>
 </view>

@@ -11,7 +11,13 @@ angular.module('starter.services', [])
          // Some fake testing data
          var offers;
          
+
+         
+         return {
+         get: function(filter) {
          jQuery.ajax( backendURL + "budgetprocess.php", {
+                     type: "POST",
+                     data: {"deals" : filter.deals, "events" : filter.events, "attractions" : filter.attractions, "budget": filter.budget},
                      async: false,
                      cache: false,
                      error: function() { console.log("oh no"); },
@@ -21,8 +27,6 @@ angular.module('starter.services', [])
                      });
          
          
-         return {
-         all: function() {
          return offers;
          }
          }
