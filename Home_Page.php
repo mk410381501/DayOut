@@ -180,14 +180,14 @@
 	<script>
 	$(function() {
 		$('#show').avgrund({
-			height: 30000,
+			height: 700,
 			holderClass: 'custom',
 			showClose: true,
 			showCloseText: 'close',
 			onBlurContainer: '.containerrr',
 			template: '<section id="conntent">' +
 			'<form form name="login" action="loginprocess.php" method="post"  accept-charset="utf-8">' +
-			'<a href="Home_Page.php"><img src="images/logoheadercopy.png"></a>' +
+			'<a href="Home_Page.php"><img src="images/logopop.png"></a>' +
 			'<h1></h1>' + '<div>' + '<input type="text" name="email" placeholder="example@dayout.com" required id="username" />' + '</div>' + '<div>' + '<input type="password" name="password" placeholder="Password" required id="password" />' + '</div>' + '<div>' + '<input type="submit" id="submit" name="submit" value="Log In">' + '</div>' + '</form>' + '</section>'
 					
 		});

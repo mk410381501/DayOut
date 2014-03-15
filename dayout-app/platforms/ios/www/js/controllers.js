@@ -34,18 +34,16 @@ angular.module('starter.controllers', [])
             $scope.navigate = function(arg) {
             
             if (arg.item_type == "DEAL") {
-                $location.path("/tab/deal/" + arg.id);
-            $scope.$apply();
+                $location.path("/deal/" + arg.id);
+                //$location.path("/home/budget/deal/" + arg.id);
             }
             
             if (arg.item_type == "EVENT") {
                 $location.path("/tab/event/" + arg.id);
-            $scope.$apply();
             }
             
             if (arg.item_type == "ATTRACTION") {
                 $location.path("/tab/attraction/" + arg.id);
-                $scope.$apply();
             }
             
 //            console.log(arg);
@@ -126,6 +124,18 @@ angular.module('starter.controllers', [])
                 maxWidth: 200,
                 showDelay: 500
             });
+            
+//            $scope.doRefresh = function() {
+//            
+//            console.log('Refreshing!');
+//            
+//                     $scope.attractions = AttractionService.all();
+//                     
+//                     //Stop the ion-refresher from spinning
+//                     $scope.$broadcast('scroll.refreshComplete');
+//                     
+//            
+//            };
             
             
         // "Pets" is a service returning mock data (services.js)

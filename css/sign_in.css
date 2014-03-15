@@ -1,5 +1,5 @@
 .containerrr {
-	position: relative;
+	position: fixed;
 	width: 900px;
 	opacity: 0.95;
 	filter: alpha(opacity=95);
@@ -12,7 +12,7 @@
 #conntent {
 	background-color: rgba(250,250,250,1.0);
 	padding: 25px 0 0;
-	position: relative;
+	position: fixed;
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
 	width: 350px;
@@ -108,7 +108,7 @@
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 16px;
 	height: 35px;
-	position: relative;
+	position: fixed;
 	width: 120px;
 	margin-bottom: 35px;
 	margin-left: 15px;

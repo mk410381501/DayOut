@@ -1,8 +1,14 @@
 <!--
   This template loads for the 'tab.about' state (app.js)
 -->
+
 <view title="'Attractions'">
     <content has-header="true" has-tabs="true">
+        <!--
+        <refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()" refreshing-icon="ion-loading-c">
+        </refresher>
+         -->
+        
         
         <list>
             <div ng-repeat="attraction in attractions" class="list card">
