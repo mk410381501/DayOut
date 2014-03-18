@@ -23,6 +23,8 @@ $image_size = mysql_real_escape_string($_FILES["file"]["size"]);
 $allowedExts = array("gif", "jpeg", "jpg", "png");
 $temp = explode(".", $image_name);
 $extension = end($temp);
+
+if(isset($_POST['submit'])){
 if ((($image_type == "image/gif")
 || ($image_type == "image/jpeg")
 || ($image_type == "image/jpg")
@@ -38,16 +40,9 @@ if ((($image_type == "image/gif")
     }
   else
     {
-    echo "Upload: " . $image_name . "<br>";
-    echo "Type: " . $image_type . "<br>";
-    echo "Size: " . ($image_size / 1024) . " kB<br>";
-    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
-    // redirect somewhere
-
     if (file_exists("upload/" . $image_name))
       {
-      // redirect somewhere and let user know it already exists
-      echo $image_name . " already exists. ";
+      include "dashboard-error.php";
       }
     else
       {
@@ -56,19 +51,16 @@ mysql_query("INSERT INTO Events (event_name, event_venue, event_info, event_pric
 		  
       move_uploaded_file($_FILES["file"]["tmp_name"],
       "upload/" . $image_name);
-      echo "Stored in: " . "upload/" . $image_name;
-      echo "SUCCESSFULLY ADDED EVENT";
       
-      $path = "/upload/$image_name";
-      echo "<img src='".$path."' />";
-      
+      include "dashboard-item_success.php";      
 
     }
     }
   }
 else
   {
-  echo "Invalid file";
+  include "dashboard-invalid.php";
+  }
   }
   
 /* The script above checks if the file already exists, if it does not, it copies the file to a folder called "upload". */

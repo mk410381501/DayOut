@@ -29,6 +29,20 @@
 	display: block;
 }
 
+.grid_HOME { width: 57%; height: 465px; }
+.grid_HOME {
+	float:right;
+	display: block;
+}
+
+.grid_HAND { width: 40%; height: 465px; }
+.grid_HAND {
+	float: left;
+	display: block;
+}
+
+
+
 .alpha{margin-left:0;}
 .omega{margin-right:0;}
 
@@ -36,6 +50,14 @@
 	width: 90%; /*width: 1000px;*/
 	max-width: 1000px;
 	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+}
+
+.handtainer{
+	width: 90%; /*width: 1000px;*/
+	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: auto;

@@ -18,7 +18,22 @@
 
 
 	<!-- <link rel="stylesheet" href="css/style.min.css" type="text/css" media="screen"> -->
-	<!--[if IE]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if IE]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]
+    .. VIDEO LINK -->
+   <link href="http://vjs.zencdn.net/4.4/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/4.4/video.js"></script>
+<style type="text/css">
+  .vjs-default-skin { color: #ffffff; }
+  .vjs-default-skin .vjs-play-progress,
+  .vjs-default-skin .vjs-volume-level { background-color: #d12020 }
+  .vjs-default-skin .vjs-control-bar,
+  .vjs-default-skin .vjs-big-play-button { background: rgba(255,13,13,0) }
+  .vjs-default-skin .vjs-slider { background: rgba(255,13,13,0) }
+  .vjs-default-skin .vjs-control-bar { font-size: 74% }
+.vjs-default-skin1 {color: #ffffff; }
+
+</style> 
+    
 </head>
 
 <body>
@@ -50,16 +65,29 @@
 
 
 	<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.8">
-		<div class="container clearfix">
+		<div class="handtainer clearfix">
+        
+        	<div id="hand" class="grid_HAND">
+           </div>
 
-			<div id="content" class="grid_12">
-				<h1>SELL MORE WITH DAYOUT</h1>
-				<h2>ADVERTISE YOUR LATEST<br />DEALS AND OFFERS.</h2>
+
+
+			<div id="content" class="grid_HOME">
+				<h1>Sell more with DayOut</h1>
+				<h2>Advertise your latest<br />deals and offers</h2>
                 <h3></h3>
 			
             <a href="register.php">
-     <button type="button"><b>Register Now</b></button>
+     <button type="button"><b>Get Started</b></button>
      </a>
+     
+     <div id="vid">
+    <video id="my_video_1" class="video-js vjs-default-skin" controls
+ preload="auto" width="100%" height="100%" poster="./images/trinity2.png"
+ data-setup="{}">
+ <source src="./images/MiddleMen.mp4" type='video/mp4'>
+</video>
+     </div>   
 
 			</div>
 		</div>
@@ -75,10 +103,10 @@
                 <p>The oldest classical Greek and Latin writing had little or no spaces between words, and could be written in boustrophedon (alternating directions). Over time, text direction (left to right) became standardized, and word dividers and terminal punctuation became common.        
         The first way to divide sentences into groups was the original paragraphos, similar to an underscore at the beginning of the new group.</p> 
         
-        	<div class="feature">
-			<div class="icon"  id="attractions_icon"></div>
-			<h4>Attractions</h4>
-	<!--		<p> DayOut shows the best local tourist attractions for you and your family and friends to enjoy.</p> -->
+        		<div class="feature">
+			<div class="icon" id="deals_icon"></div>
+			<h4>Deals</h4>
+			<!-- <p>DayOut allows users to get the best deals available, all day, everyday.</p> -->
 		</div>
 		
 		<div class="feature">
@@ -86,11 +114,11 @@
 			<h4>Events</h4>
 			<!-- <p> Find out what major events happen across Dublin with Dayout. You'll find so many great things planned in our calendar.</p> -->
 		</div>
-		
-		<div class="feature">
-			<div class="icon" id="deals_icon"></div>
-			<h4>Deals</h4>
-			<!-- <p>DayOut allows users to get the best deals available, all day, everyday.</p> -->
+        
+        <div class="feature">
+			<div class="icon"  id="attractions_icon"></div>
+			<h4>Attractions</h4>
+	<!--		<p> DayOut shows the best local tourist attractions for you and your family and friends to enjoy.</p> -->
 		</div>
 		
 			</div>
@@ -104,7 +132,7 @@
 		<div class="container clearfix">
 
 			<div id="content" class="grid_12">
-				<h3>ABOUT DAYOUT</h3>
+				<h3>About DayOut</h3>
                 <p>The oldest classical Greek and Latin writing had little or no spaces between words, and could be written in boustrophedon (alternating directions). Over time, text direction (left to right) became standardized, and word dividers and terminal punctuation became common.        
         The first way to divide sentences into groups was the original paragraphos, similar to an underscore at the beginning of the new group.</p> 
 <br> </br>

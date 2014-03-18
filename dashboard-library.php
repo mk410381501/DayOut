@@ -44,7 +44,6 @@ include "Config.php";
 					<li><a href="dashboard.php">HOME</a></li>
 					<li><a href="dashboard-library.php"><b>LIBRARY</b></a></li>
 					<li><a href="dashboard-deals.php">ADD ITEMS</a></li>
-					<li><a href="">YOUR BUSINESS</a></li>
                   <li> 
                   	<signin><a href="logout.php">Log Out</a>
                   	</signin>

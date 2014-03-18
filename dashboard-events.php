@@ -26,7 +26,6 @@
 					<li><a href="dashboard.php">HOME</a></li>
 					<li><a href="dashboard-library.php">LIBRARY</a></li>
 					<li><a href="dashboard-deals.php"><b>ADD ITEMS</b></a></li>
-					<li><a href="">YOUR BUSINESS</a></li>
                   <li> 
                   	<signin><a href="logout.php">Log Out</a>
                   	</signin>
@@ -53,14 +52,10 @@
     
 <div id="event_table">
                 
-                <?php include"event_form.php";?>
+                <?php include "event_form.php";?>
                 <br></br>
                 </div>
 
-    
- 
- 
-        
     <div id="footer">
 	
 	<div class="container clearfix">
@@ -99,5 +94,3 @@
 </body>
 
 </html>
-
-

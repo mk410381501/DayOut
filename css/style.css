@@ -26,9 +26,12 @@ a:visited {
 
 *
 {
-	margin:0;
-	padding:0;
-	font-family:'Source Sans Pro', sans-serif;
+	padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
 }
 
 
@@ -111,50 +114,53 @@ a:visited {
 
 /* Slide 1 */ 
 
+#hand {
+	background:url('../images/iphone5DayOut.png');
+	background-size:cover;
+}
+
 #slide1{
-	background:url('../images/trinity2.png');
+	background-color:#2892c6;
 	width:100%;
 	background-size:cover;
 	position:relative;
 	overflow:hidden;
-	padding:160px 0;
-
+	padding-top:160px;
 }
 #slide1 h1 {
 	
-	font-weight:400;
+	font-weight:300;
 	font-size:54px;
-	color:#000;
+	color:#fff;
 	line-height:1.1;
 	margin-bottom:15px;
+	margin-top: 0px;
 }
 
 #slide1 h2 {
 	
 	font-size:32px;
-	font-weight:400;
+	font-weight:300;
 	line-height:1.5;
-	color:#000;
+	color:#fff;
 	opacity:.9;
 	margin-bottom:10px;
-	
 	padding-bottom:20px;
 }
 
 button{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 13px;
-	font-weight:400;
-	letter-spacing:1px;
+	letter-spacing:1.1px;
 	text-transform:uppercase;
 	
-	border: 1px solid #00a2e2;
-	background: -webkit-linear-gradient(top,  #00a2e2 0%,#00a2e2 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #00a2e2 0%,#00a2e2 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #00a2e2 0%,#00a2e2 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #00a2e2 0%,#00a2e2 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64c8ef', endColorstr='#00a2e2',GradientType=0 ); /* IE6-9 */
-	color: #000;
+	border: 1px solid #00b4fc;
+	background: -webkit-linear-gradient(top,  #00b4fc 0%,#00b4fc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #00b4fc 0%,#00b4fc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #00b4fc 0%,#00b4fc 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #00b4fc 0%,#00b4fc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b4fc', endColorstr='#00b4fc',GradientType=0 ); /* IE6-9 */
+	color: #fff;
 	padding: 3px 8px;
 	border-radius: 3px;
 	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
@@ -169,7 +175,15 @@ button{
 
 button:hover {
 	cursor:pointer;
-	background: #2892c6;
+	background: #00a2e2;
+}
+
+#vid {
+	width:50%;
+	margin-left:25%;
+	margin-top:50px;
+	height: 150px;
+	
 }
 
 /* Slide 2 */ 
@@ -183,7 +197,6 @@ button:hover {
 #slide2 h3
 {
 	font-size:48px;
-	text-transform:uppercase;
 	font-weight:300;
 	margin-bottom:30px;
 }
@@ -226,21 +239,21 @@ button:hover {
 	height:120px;
 	display:block;
 	margin:0 auto;
-	border:2px solid #737373;
+	border:2px solid #2892c6;
 	border-radius:60px;
-	margin-bottom:30px;
-	background:url(events-icon.png) no-repeat center;
+	margin-bottom:20px;
+	background:url('../images/events-icon.png') no-repeat center;
 }
 
 /* change this to have attractions NOT societies */
 .feature #attractions_icon
 {
-	background-image:url(attractioncopy.png) !important;
+	background-image:url('../images/attractions-icon.png') !important;
 }
 
 .feature #deals_icon
 {
-	background-image:url(deals-icon.png) !important;
+	background-image:url('../images/deals-icon.png') !important;
 }
 
 /* heading of each of the icons */	
@@ -248,7 +261,10 @@ button:hover {
 {
 	text-transform:uppercase;
 	font-size:15px;
+	font-weight:400;
+	letter-spacing:1.8px;
 	margin-bottom:10px;
+	color: #2892c6;
 }
 
 /* font under the headings */
@@ -268,7 +284,6 @@ button:hover {
 }
 #slide3 h3 {
 	font-size:48px;
-	text-transform:uppercase;
 	font-weight:300;
 	margin-bottom:30px;
 }
@@ -293,7 +308,6 @@ button:hover {
 
 #slide4 h3 {
 	font-size:48px;
-	text-transform:uppercase;
 	font-weight:300;
 	margin-bottom:30px;
 }
@@ -508,6 +522,5 @@ h5,ol,ul,li
 #slide4 h2 {
 	line-height: 1em;
 }
-
 
 }

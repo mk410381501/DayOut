@@ -21,7 +21,7 @@ enctype="multipart/form-data">
 <tr>
 <td><label for="file">Picture *</label></td>
 <td><input type="file" name="file" id="file" required/>
-  <div id="info">Maximum size 80KB</div></td>
+  <div id="info">Maximum size 200KB</div></td>
 </tr>
 
 
