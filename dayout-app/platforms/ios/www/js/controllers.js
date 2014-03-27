@@ -34,16 +34,16 @@ angular.module('starter.controllers', [])
             $scope.navigate = function(arg) {
             
             if (arg.item_type == "DEAL") {
-                $location.path("/deal/" + arg.id);
+                $location.path("/tab/home/budget/deal/" + arg.id);
                 //$location.path("/home/budget/deal/" + arg.id);
             }
             
             if (arg.item_type == "EVENT") {
-                $location.path("/tab/event/" + arg.id);
+                $location.path("/tab/home/budget/event/" + arg.id);
             }
             
             if (arg.item_type == "ATTRACTION") {
-                $location.path("/tab/attraction/" + arg.id);
+                $location.path("/tab/home/budget/attraction/" + arg.id);
             }
             
 //            console.log(arg);
@@ -64,9 +64,15 @@ angular.module('starter.controllers', [])
                 showDelay: 500
             });
             
-//            $timeout(function() {
-//                     loading.hide();
-//                     }, 3000);
+            $scope.onRefresh = function() {
+            console.log("refreshing...");
+            // Load content
+            $scope.events = EventService.all();
+            
+            // Trigger refresh complete on the pull to refresh action
+            $scope.$broadcast('scroll.refreshComplete');
+            $scope.$apply();
+            };
             
   // "Pets" is a service returning mock data (services.js)
   $scope.events = EventService.all();
@@ -94,6 +100,16 @@ angular.module('starter.controllers', [])
                 maxWidth: 200,
                 showDelay: 500
             });
+            
+            $scope.onRefresh = function() {
+            console.log("refreshing...");
+            // Load content
+            $scope.deals = DealService.all();
+            
+            // Trigger refresh complete on the pull to refresh action
+            $scope.$broadcast('scroll.refreshComplete');
+            $scope.$apply();
+            };
             
             
         // "Pets" is a service returning mock data (services.js)
@@ -125,17 +141,15 @@ angular.module('starter.controllers', [])
                 showDelay: 500
             });
             
-//            $scope.doRefresh = function() {
-//            
-//            console.log('Refreshing!');
-//            
-//                     $scope.attractions = AttractionService.all();
-//                     
-//                     //Stop the ion-refresher from spinning
-//                     $scope.$broadcast('scroll.refreshComplete');
-//                     
-//            
-//            };
+            $scope.onRefresh = function() {
+            console.log("refreshing...");
+                // Load content
+                $scope.attractions = AttractionService.all();
+            
+                // Trigger refresh complete on the pull to refresh action
+                $scope.$broadcast('scroll.refreshComplete');
+                $scope.$apply();
+            };
             
             
         // "Pets" is a service returning mock data (services.js)

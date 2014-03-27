@@ -45,6 +45,8 @@ if ((($image_type == "image/gif")
     }
   else
     {
+    // Adding a timestamp to to the image name as well as a four digit random number.. making it close to impossible for any name to be the same
+    $image_name = substr($image_name, 0, strrpos($image_name, '.')). time().rand(0, 9999).substr($image_name, strrpos($image_name, '.'));
     if (file_exists("upload/" . $image_name))
       {
       include "dashboard-error.php";

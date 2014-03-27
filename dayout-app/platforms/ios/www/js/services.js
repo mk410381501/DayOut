@@ -8,13 +8,11 @@ angular.module('starter.services', [])
 .factory('BudgetService', function() {
          // Might use a resource here that returns a JSON array
          
-         // Some fake testing data
          var offers;
-         
-
          
          return {
          get: function(filter) {
+         
          jQuery.ajax( backendURL + "budgetprocess.php", {
                      type: "POST",
                      data: {"deals" : filter.deals, "events" : filter.events, "attractions" : filter.attractions, "budget": filter.budget},
@@ -38,8 +36,10 @@ angular.module('starter.services', [])
 .factory('EventService', function() {
          // Might use a resource here that returns a JSON array
          
-         // Some fake testing data
          var events;
+         
+         return {
+         all: function() {
          
          jQuery.ajax( backendURL + "events_summary.php", {
                      async: false,
@@ -50,9 +50,6 @@ angular.module('starter.services', [])
                      }
                      });
          
-         
-         return {
-         all: function() {
          return events;
          }
          }
@@ -69,6 +66,7 @@ angular.module('starter.services', [])
          
          return {
          get: function(nId) {
+         
          jQuery.ajax( backendURL + "events_details.php?event_id="+nId, {
                      async: false,
                      cache: false,
@@ -96,6 +94,9 @@ angular.module('starter.services', [])
          
          var deals;
          
+         return {
+         all: function() {
+         
          jQuery.ajax( backendURL + "deals_summary.php", {
                      async: false,
                      cache: false,
@@ -105,9 +106,6 @@ angular.module('starter.services', [])
                      }
                      });
          
-         
-         return {
-         all: function() {
          return deals;
          }
          }
@@ -124,14 +122,15 @@ angular.module('starter.services', [])
 
          return {
          get: function(nId) {
-                  jQuery.ajax( backendURL + "deals_detail.php?deal_id="+nId, {
-                              async: false,
-                              cache: false,
-                              error: function() { console.log("oh no"); },
-                             success: function(oData) {
-                              deal = oData;
-                              }
-                              });
+         
+            jQuery.ajax( backendURL + "deals_detail.php?deal_id="+nId, {
+                        async: false,
+                        cache: false,
+                        error: function() { console.log("oh no"); },
+                        success: function(oData) {
+                        deal = oData;
+                        }
+                        });
          
          return deal;
          }
@@ -149,6 +148,9 @@ angular.module('starter.services', [])
          
          var attractions;
          
+         return {
+         all: function() {
+         
          jQuery.ajax( backendURL + "attractions_summary.php", {
                      async: false,
                      cache: false,
@@ -158,9 +160,6 @@ angular.module('starter.services', [])
                      }
                      });
          
-         
-         return {
-         all: function() {
          return attractions;
          }
          }
@@ -177,6 +176,7 @@ angular.module('starter.services', [])
          
          return {
          get: function(nId) {
+         
          jQuery.ajax( backendURL + "attractions_detail.php?attraction_id="+nId, {
                      async: false,
                      cache: false,

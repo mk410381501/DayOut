@@ -1,0 +1,221 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.6
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Mar 27, 2014 at 01:20 PM
+-- Server version: 5.5.33
+-- PHP Version: 5.5.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `fyp_database`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Attractions`
+--
+
+CREATE TABLE `Attractions` (
+  `user_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `attraction_name` varchar(50) NOT NULL,
+  `attraction_info` text NOT NULL,
+  `attraction_address1` varchar(50) NOT NULL,
+  `attraction_address2` varchar(50) NOT NULL,
+  `attraction_address3` varchar(50) NOT NULL,
+  `attraction_address4` varchar(50) NOT NULL,
+  `attraction_price` varchar(10) NOT NULL,
+  `attraction_day` int(10) NOT NULL,
+  `attraction_month` varchar(10) NOT NULL,
+  `attraction_year` int(10) NOT NULL,
+  `attraction_contact` varchar(20) NOT NULL,
+  `attraction_booking` varchar(500) NOT NULL,
+  `image_name` varchar(50) NOT NULL,
+  `image` blob NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `Attractions`
+--
+
+INSERT INTO `Attractions` (`user_id`, `id`, `attraction_name`, `attraction_info`, `attraction_address1`, `attraction_address2`, `attraction_address3`, `attraction_address4`, `attraction_price`, `attraction_day`, `attraction_month`, `attraction_year`, `attraction_contact`, `attraction_booking`, `image_name`, `image`) VALUES
+(2, 1, 'Starbucks Attraction Day!', 'Natural beauty such as beaches, tropical island resorts with coral reefs, hiking and camping in national parks, mountains and forests, are examples of traditional tourist attractions to spend summer vacation. While some examples of cultural tourist attractions include historical places, monuments, ancient temples, zoos, aquaria, museums and art galleries, botanical gardens, buildings and structures (e.g., castles, libraries, former prisons, skyscrapers, bridges), theme parks and carnivals, living history museums, ethnic enclave communities, historic trains and cultural events. Many tourist attractions are also landmarks.', 'Piper Hill', 'Hillcrest Road', 'Sandyford', 'Dublin 18', '175.99', 10, 'December', 2016, '087 6293056', 'https://www.dublinzoo.ie', 'footprints.png', ''),
+(1, 4, 'gerfwedq', 'htnerwfwe', 'rfvwed', 'fwved', 'fwed', 'few', '324', 2, 'January', 2015, '234984', 'www.dublinzoo.ie', 'icon-6013953941166125.png', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `BusinessInfo`
+--
+
+CREATE TABLE `BusinessInfo` (
+  `user_id` int(11) DEFAULT NULL,
+  `b_name` varchar(40) DEFAULT NULL,
+  `number` int(15) DEFAULT NULL,
+  `address1` varchar(90) DEFAULT NULL,
+  `address2` varchar(90) DEFAULT NULL,
+  `address3` varchar(90) DEFAULT NULL,
+  `address4` varchar(90) DEFAULT NULL,
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `BusinessInfo`
+--
+
+INSERT INTO `BusinessInfo` (`user_id`, `b_name`, `number`, `address1`, `address2`, `address3`, `address4`) VALUES
+(1, 'Texaco Garage', 1, 'Piper Hill', 'Hillcrest Road', 'Sandyford ', 'Dublin 18'),
+(2, 'Starbucks', 12957872, 'Serla House', 'Green Hills Road', 'Tallaght', 'Dublin 24'),
+(3, 'Apple', 3456432, 'dfgdsdfgd', 'sdfgwefg', 'sdfgdsf', 'sdfgs'),
+(4, 'Serla Print', 12956348, 'Serla House', 'Green Hills Road', 'Tallaght', 'Dublin 24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Deals`
+--
+
+CREATE TABLE `Deals` (
+  `user_id` int(11) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `item_name` varchar(50) NOT NULL,
+  `item_info` text NOT NULL,
+  `item_price` varchar(10) NOT NULL,
+  `item_day` int(10) NOT NULL,
+  `item_month` varchar(10) NOT NULL,
+  `item_year` int(10) NOT NULL,
+  `item_contact` int(15) NOT NULL,
+  `item_booking` varchar(500) NOT NULL,
+  `image_name` varchar(50) NOT NULL,
+  `image` blob NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `Deals`
+--
+
+INSERT INTO `Deals` (`user_id`, `id`, `item_name`, `item_info`, `item_price`, `item_day`, `item_month`, `item_year`, `item_contact`, `item_booking`, `image_name`, `image`) VALUES
+(2, 1, 'Coffee & Raspberry Muffin', 'Is it the mouth-watering aroma of muffins and mini muffins freshly baked every morning or our unique blend of premium coffee?\r\n\r\nIs it our freshly prepared range of hot and cold wraps, sandwiches and toasties?\r\n\r\nIs it our refreshing range of iced coffees, frappes or refreshers? Is it our great service in a welcoming and relaxing environment? There are a lot of things that come together to make bbâ€™s coffee & muffins a great place to meet and relax so why not try it today.', '3.49', 4, 'May', 2012, 800, 'www.starbucks.com', 'coffee-muffin.jpg', ''),
+(1, 2, 'egrwqwe', 'fgdsas', '33', 2, 'March', 2015, 53242, 'erter', 'event-icon.png', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Events`
+--
+
+CREATE TABLE `Events` (
+  `user_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `event_name` varchar(50) NOT NULL,
+  `event_venue` text NOT NULL,
+  `event_info` text NOT NULL,
+  `event_price` varchar(10) NOT NULL,
+  `event_day` int(10) NOT NULL,
+  `event_month` varchar(20) NOT NULL,
+  `event_year` int(10) NOT NULL,
+  `event_online` varchar(500) NOT NULL,
+  `event_contact` int(15) NOT NULL,
+  `image_name` varchar(100) NOT NULL,
+  `image` blob NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `Events`
+--
+
+INSERT INTO `Events` (`user_id`, `id`, `event_name`, `event_venue`, `event_info`, `event_price`, `event_day`, `event_month`, `event_year`, `event_online`, `event_contact`, `image_name`, `image`) VALUES
+(2, 1, 'Starbucks St. Patricks Festival', 'O''Connell Street, Dublin 1', 'The principal aim of St. Patrick''s Festival, since its inauguration, is to develop a major annual international festival around the national holiday over which the ''owners'' of the festival, the Irish people, would stand proud. It sets out to reflect the talents and achievements of Irish people on many national and world stages, and it acts as an exciting showcase for the manifold skills of the people of Ireland, of every age and social background.', 'Free', 17, 'March', 2014, 'http://www.stpatricksfestival.ie', 876293056, 'festival-fun.jpg', ''),
+(2, 2, 'Testing', '02 Dublin Arena', 'ntbgrfvwecdqxsqdfghjyhtgr thy4tg3rf3e2d1r4gthy yh54gt3rft4hy54tg34r hyj6h5t4g3thy5j6u yhg5hy6juhy5gt43hj6u yh54gtju6yh54gthj7h5gt4 ju', '21.99', 4, 'May', 2015, 'http://www.youtube.ie', 653245632, 'Screenshot 2014-03-07 11.14.06.png', ''),
+(1, 3, 'Hello World', 'gtefwfvsc', 'rewqewbfevwd', '3412', 2, 'January', 2016, 'hrtnegbfwdqs', 4235435, 'logo.png', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Services`
+--
+
+CREATE TABLE `Services` (
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  `industry` varchar(100) DEFAULT NULL,
+  `reason` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Services`
+--
+
+INSERT INTO `Services` (`user_id`, `industry`, `reason`) VALUES
+(1, 'Retail', 'Deals'),
+(2, 'Casual Use', 'Attractions, Deals & Events'),
+(3, 'Food and Drink', 'Deals'),
+(4, 'Retail', 'Deals');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `User`
+--
+
+CREATE TABLE `User` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(40) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `User`
+--
+
+INSERT INTO `User` (`id`, `email`, `password`) VALUES
+(1, 'murrayk4@tcd.ie', '74388ffe6b06352ab70bb149dee180e5'),
+(2, 'example@dayout.com', '1a79a4d60de6718e8e5b326e338ae533'),
+(3, 'seb@gmail.com', '098f6bcd4621d373cade4e832627b4f6'),
+(4, 'test@gmail.com', '098f6bcd4621d373cade4e832627b4f6');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `Attractions`
+--
+ALTER TABLE `Attractions`
+  ADD CONSTRAINT `attractions_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);
+
+--
+-- Constraints for table `BusinessInfo`
+--
+ALTER TABLE `BusinessInfo`
+  ADD CONSTRAINT `businessinfo_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);
+
+--
+-- Constraints for table `Deals`
+--
+ALTER TABLE `Deals`
+  ADD CONSTRAINT `deals_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);
+
+--
+-- Constraints for table `Events`
+--
+ALTER TABLE `Events`
+  ADD CONSTRAINT `events_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);
+
+--
+-- Constraints for table `Services`
+--
+ALTER TABLE `Services`
+  ADD CONSTRAINT `services_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);

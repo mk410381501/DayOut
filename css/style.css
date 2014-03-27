@@ -239,7 +239,7 @@ button:hover {
 	height:120px;
 	display:block;
 	margin:0 auto;
-	border:2px solid #2892c6;
+	border:2px solid #4a87ee;
 	border-radius:60px;
 	margin-bottom:20px;
 	background:url('../images/events-icon.png') no-repeat center;
@@ -264,7 +264,7 @@ button:hover {
 	font-weight:400;
 	letter-spacing:1.8px;
 	margin-bottom:10px;
-	color: #2892c6;
+	color: #4a87ee;
 }
 
 /* font under the headings */

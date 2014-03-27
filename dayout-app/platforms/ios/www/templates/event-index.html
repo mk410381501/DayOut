@@ -4,7 +4,9 @@
   The 'pets' data comes from its $scope within PetIndexCtrl (controller.js)
 -->
 <view title="'Events'">
-  <content has-header="true" has-tabs="true">
+  <content has-header="true" has-tabs="true" on-refresh="onRefresh()">
+      
+      <refresher></refresher>
       
       <list>
       <div ng-repeat="event in events" class="list card">
@@ -16,7 +18,7 @@
                       <itemname>{{event.event_name}}</itemname><br>
                       <sub>{{event.bname}}</sub>
                       <price>{{event.event_price}}</price>
-                </div>
+               </div>
           </div>
           </a>
           

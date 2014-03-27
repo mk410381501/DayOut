@@ -2,7 +2,9 @@
   This template loads for the 'tab.about' state (app.js)
 -->
 <view title="'Deals'">
-    <content has-header="true" has-tabs="true">
+    <content has-header="true" has-tabs="true" on-refresh="onRefresh()">
+        
+        <refresher></refresher>
         
         <list>
             <div ng-repeat="deal in deals" class="list card">

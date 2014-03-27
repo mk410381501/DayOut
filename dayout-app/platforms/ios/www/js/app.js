@@ -64,6 +64,16 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
         }
       }
     })
+        
+    .state('tab.event-filter', {
+               url: '/home/budget/event/:id',
+               views: {
+               'home-tab': {
+               templateUrl: 'templates/event-detail.html',
+               controller: 'EventDetailCtrl'
+               }
+               }
+               })
 
         // DEALS PAGE
         .state('tab.deal-index', {
@@ -86,6 +96,16 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
                }
                })
         
+        .state('tab.deal-filter', {
+               url: '/home/budget/deal/:id',
+               views: {
+               'home-tab': {
+               templateUrl: 'templates/deal-detail.html',
+               controller: 'DealDetailCtrl'
+               }
+               }
+               })
+        
         // ATTRACTIONS PAGE
         .state('tab.attraction-index', {
                url: '/attractions',
@@ -101,6 +121,16 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
                url: '/attraction/:id',
                views: {
                'attractions-tab': {
+               templateUrl: 'templates/attraction-detail.html',
+               controller: 'AttractionDetailCtrl'
+               }
+               }
+               })
+        
+        .state('tab.attraction-filter', {
+               url: '/home/budget/attraction/:id',
+               views: {
+               'home-tab': {
                templateUrl: 'templates/attraction-detail.html',
                controller: 'AttractionDetailCtrl'
                }
